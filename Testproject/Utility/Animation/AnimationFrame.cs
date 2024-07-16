@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Rectangle = Microsoft.Xna.Framework.Rectangle;
 
-namespace Testproject
+namespace GameDevProject.Utility.Animation
 {
     internal class AnimationFrame
     {

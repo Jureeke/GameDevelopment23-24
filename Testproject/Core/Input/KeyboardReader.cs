@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Testproject.Input
+namespace GameDevProject.Core.Input
 {
     internal class KeyboardReader : IInputReader
     {
-        public Microsoft.Xna.Framework.Vector2 Readinput()
+        public Vector2 Readinput()
         {
             KeyboardState state = Keyboard.GetState();
             Vector2 direction = Vector2.Zero;
@@ -18,7 +18,7 @@ namespace Testproject.Input
             {
                 direction.X -= 1;
             }
-            if (state.IsKeyDown(Keys.Right) ||  state.IsKeyDown(Keys.D))
+            if (state.IsKeyDown(Keys.Right) || state.IsKeyDown(Keys.D))
             {
                 direction.X += 1;
             }

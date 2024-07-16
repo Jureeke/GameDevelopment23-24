@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Testproject.Input
+namespace GameDevProject.Core.Input
 {
     internal interface IInputReader
     {

@@ -1,4 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GameDevProject.Core.Input;
+using GameDevProject.Core.Movement;
+using GameDevProject.Utility.Animation;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using SharpDX.Direct3D9;
@@ -7,9 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Testproject.Input;
 
-namespace Testproject
+namespace GameDevProject.Core
 {
     internal class Hero : IGameObject, IMovable
     {
@@ -26,8 +28,8 @@ namespace Testproject
         public Hero(Texture2D texture, IInputReader inputReader, Vector2 postiiton, Vector2 speed)
         {
             this.texture = texture;
-            this.animation = new Animation();
-            this.movementManager = new MovementManager();
+            animation = new Animation();
+            movementManager = new MovementManager();
 
             animation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
 
@@ -47,7 +49,7 @@ namespace Testproject
         {
             animation.Update(gameTime);
             Move();
-    
+
         }
 
         private void Move()

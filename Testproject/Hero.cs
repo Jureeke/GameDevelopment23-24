@@ -1,0 +1,58 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using SharpDX.Direct3D9;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Testproject.Input;
+
+namespace Testproject
+{
+    internal class Hero : IGameObject, IMovable
+    {
+        private Texture2D texture;
+        private Animation animation;
+
+        private MovementManager movementManager;
+
+        public Vector2 Position { get; set; }
+        public Vector2 Speed { get; set; }
+        public Vector2 Direction { get; set; }
+        IInputReader IMovable.inputReader { get; set; }
+
+        public Hero(Texture2D texture, IInputReader inputReader, Vector2 postiiton, Vector2 speed)
+        {
+            this.texture = texture;
+            this.animation = new Animation();
+            this.movementManager = new MovementManager();
+
+            animation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
+
+            ((IMovable)this).Position = postiiton;
+            ((IMovable)this).Speed = speed;
+            ((IMovable)this).inputReader = inputReader;
+        }
+
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            SpriteEffects spriteeffect = ((IMovable)this).Direction.X >= 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            spriteBatch.Draw(texture, ((IMovable)this).Position, animation.CurrentFrame.SourceRectangle, Color.White, 0, Vector2.Zero, 1.5f, spriteeffect, 0f);
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            animation.Update(gameTime);
+            Move();
+    
+        }
+
+        private void Move()
+        {
+            movementManager.Move(this);
+        }
+    }
+}

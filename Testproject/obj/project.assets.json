@@ -7509,9 +7509,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\GameDevProject.csproj",
-      "projectName": "GameDevProject",
-      "projectPath": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\GameDevProject.csproj",
+      "projectUniqueName": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Testproject.csproj",
+      "projectName": "Testproject",
+      "projectPath": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Testproject.csproj",
       "packagesPath": "C:\\Users\\tibov\\.nuget\\packages\\",
       "outputPath": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\obj\\",
       "projectStyle": "PackageReference",

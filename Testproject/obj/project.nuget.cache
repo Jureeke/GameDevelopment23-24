@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jYNwKmptHt0=",
+  "dgSpecHash": "aAUSjXcss4M=",
   "success": true,
-  "projectFilePath": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\GameDevProject.csproj",
+  "projectFilePath": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Testproject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tibov\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",

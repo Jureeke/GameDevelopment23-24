@@ -1,12 +1,12 @@
-﻿using GameDevProject.Core.Input;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Testproject.Input;
 
-namespace GameDevProject.Core.Movement
+namespace Testproject
 {
     internal interface IMovable
     {

@@ -4,10 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/vincentjure/Desktop/Testproject/Testproject/Content/Space Background.png</File>
-    <File>C:/Users/vincentjure/Desktop/Testproject/Testproject/Content/SpaceHero2SpriteSheet.png</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/Font.spritefont</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/Space Background.png</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/SpaceHero2SpriteSheet.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

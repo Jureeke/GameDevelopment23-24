@@ -77,3 +77,4 @@ C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-wind
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproj.126AFAC9.Up2Date
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.genruntimeconfig.cache
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\ref\Testproject.dll
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Font.xnb

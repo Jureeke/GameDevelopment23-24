@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/vincentjure/Desktop/Testproject/Testproject/Content/SpaceHero2SpriteSheet.png</SourceFile>
-  <SourceTime>2023-11-10T09:42:18.7699256+01:00</SourceTime>
-  <DestFile>C:/Users/vincentjure/Desktop/Testproject/Testproject/Content/bin/Windows/Content/SpaceHero2SpriteSheet.xnb</DestFile>
-  <DestTime>2023-11-10T09:43:28.8429787+01:00</DestTime>
+  <SourceFile>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/SpaceHero2SpriteSheet.png</SourceFile>
+  <SourceTime>2024-07-16T12:40:26.2093617+02:00</SourceTime>
+  <DestFile>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/bin/Windows/Content/SpaceHero2SpriteSheet.xnb</DestFile>
+  <DestTime>2024-07-16T12:42:13.9954571+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

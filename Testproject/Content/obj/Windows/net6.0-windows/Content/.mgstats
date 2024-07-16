@@ -1,1 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/Space Background.png","C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/bin/Windows/Content/Space Background.xnb","TextureProcessor","Texture2DContent",9109,160085,0,1464397
+"C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/SpaceHero2SpriteSheet.png","C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/bin/Windows/Content/SpaceHero2SpriteSheet.xnb","TextureProcessor","Texture2DContent",20533,1474645,0,0507403

@@ -42,8 +42,8 @@ namespace Testproject
 
             // TODO: use this.Content to load your game content here
 
-            _texture = Content.Load<Texture2D>("SpaceHero2SpriteSheet");
-            background = Content.Load<Texture2D>("Space Background");
+            _texture = Content.Load<Texture2D>("Gladiator-SpriteSheet");
+            //background = Content.Load<Texture2D>("Space Background");
         }
 
         protected override void Update(GameTime gameTime)

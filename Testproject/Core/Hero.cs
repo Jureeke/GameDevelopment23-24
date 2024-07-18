@@ -43,7 +43,7 @@ namespace GameDevProject.Core
         public void Draw(SpriteBatch spriteBatch)
         {
             SpriteEffects spriteeffect = ((IMovable)this).Direction.X >= 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-            spriteBatch.Draw(texture, ((IMovable)this).Position, animation.CurrentFrame.SourceRectangle, Color.White, 0, Vector2.Zero, 1.5f, spriteeffect, 0f);
+            spriteBatch.Draw(texture, ((IMovable)this).Position, animation.CurrentFrame.SourceRectangle, Color.White, 0, Vector2.Zero, 1f, spriteeffect, 0f);
         }
 
         public void Update(GameTime gameTime)

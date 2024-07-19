@@ -22,6 +22,12 @@ namespace GameDevProject.Core.Input
             {
                 direction.X += 1;
             }
+
+            if (state.IsKeyDown(Keys.Space))
+            {
+                direction.Y -= 1; // Voor springen
+            }
+            /*
             if (state.IsKeyDown(Keys.Up) || state.IsKeyDown(Keys.Z))
             {
                 direction.Y -= 1;
@@ -30,6 +36,7 @@ namespace GameDevProject.Core.Input
             {
                 direction.Y += 1;
             }
+            */
             return direction;
         }
     }

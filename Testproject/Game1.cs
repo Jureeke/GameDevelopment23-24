@@ -32,7 +32,7 @@ namespace Testproject
         {
             // TODO: Add your initialization logic here
             base.Initialize();
-            hero = new Hero(_texture, new KeyboardReader(), new Vector2(0, 0), new Vector2(2, 2));
+            hero = new Hero(_texture, new KeyboardReader(), new Vector2(0, 500), new Vector2(2, 2));
         }
 
 

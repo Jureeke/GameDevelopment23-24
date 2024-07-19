@@ -32,7 +32,7 @@ namespace Testproject
         {
             // TODO: Add your initialization logic here
             base.Initialize();
-            hero = new Hero(_texture, new KeyboardReader(), new Vector2(0, 0), new Vector2(2, 2));
+            hero = new Hero(_texture, new KeyboardReader(), new Vector2(0, 500), new Vector2(2, 2));
         }
 
 
@@ -42,8 +42,8 @@ namespace Testproject
 
             // TODO: use this.Content to load your game content here
 
-            _texture = Content.Load<Texture2D>("SpaceHero2SpriteSheet");
-            background = Content.Load<Texture2D>("Space Background");
+            _texture = Content.Load<Texture2D>("Gladiator-SpriteSheet");
+            //background = Content.Load<Texture2D>("Space Background");
         }
 
         protected override void Update(GameTime gameTime)

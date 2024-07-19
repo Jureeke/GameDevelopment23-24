@@ -77,3 +77,45 @@ C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-wind
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproj.126AFAC9.Up2Date
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.genruntimeconfig.cache
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\ref\Testproject.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\SpaceHero2SpriteSheet.xnb
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.exe
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.deps.json
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.runtimeconfig.json
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.pdb
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\MonoGame.Framework.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\SharpDX.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\SharpDX.Direct2D1.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\SharpDX.Direct3D11.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\SharpDX.Direct3D9.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\SharpDX.DXGI.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\SharpDX.Mathematics.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\SharpDX.MediaFoundation.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\SharpDX.XAudio2.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\SharpDX.XInput.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\runtimes\debian-x64\native\libuv.so
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\runtimes\fedora-x64\native\libuv.so
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\runtimes\opensuse-x64\native\libuv.so
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\runtimes\osx\native\libuv.dylib
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\runtimes\rhel-x64\native\libuv.so
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\runtimes\win7-arm\native\libuv.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\runtimes\win7-x64\native\libuv.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\runtimes\win7-x86\native\libuv.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.csproj.AssemblyReference.cache
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.AssemblyInfoInputs.cache
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.AssemblyInfo.cs
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.csproj.CoreCompileInputs.cache
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.csproj.CopyComplete
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\refint\Testproject.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.pdb
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.genruntimeconfig.cache
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\ref\Testproject.dll
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\BrainMoleMonarchSpriteSheet.xnb
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GhoulSpriteSheet.xnb
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Gladiator-SpriteSheet.xnb
+C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\ShardsoulSlayerSpriteSheet.xnb

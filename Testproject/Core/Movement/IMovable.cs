@@ -14,5 +14,7 @@ namespace GameDevProject.Core.Movement
         public Vector2 Speed { get; set; }
         public Vector2 Direction { get; set; }
         public IInputReader inputReader { get; set; }
+
+        void Jump();
     }
 }

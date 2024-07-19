@@ -22,13 +22,9 @@ namespace GameDevProject.Core.Input
             {
                 direction.X += 1;
             }
-            if (state.IsKeyDown(Keys.Up) || state.IsKeyDown(Keys.Z))
+            if (state.IsKeyDown(Keys.Space))
             {
                 direction.Y -= 1;
-            }
-            if (state.IsKeyDown(Keys.Down) || state.IsKeyDown(Keys.S))
-            {
-                direction.Y += 1;
             }
             return direction;
         }

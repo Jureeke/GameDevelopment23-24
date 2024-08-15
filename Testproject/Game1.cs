@@ -1,36 +1,42 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using System.Reflection.Metadata;
+using Testproject.Core.GameStates;
+using Testproject.Map.Tiles;
 
 namespace Testproject
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager _graphics;
-        public SpriteBatch SpriteBatch;
-        public SpriteFont Font;
+        public GraphicsDeviceManager GraphicsDeviceManager;
+        private SpriteBatch _spriteBatch;
 
-        private GameManager gameManager;
+        private GameManager _gameManager;
 
         public Game1()
         {
-            _graphics = new GraphicsDeviceManager(this);
+            GraphicsDeviceManager = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            GraphicsDeviceManager.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            GraphicsDeviceManager.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            GraphicsDeviceManager.IsFullScreen = true;
+            GraphicsDeviceManager.HardwareModeSwitch = false;
         }
 
         protected override void Initialize()
         {
+            _gameManager = new GameManager(this);
+            _gameManager.Activate();
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
-            SpriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // Load your font and button texture
-            Font = Content.Load<SpriteFont>("Font");
-            gameManager = new GameManager(this);
+            _spriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
         protected override void Update(GameTime gameTime)
@@ -38,14 +44,20 @@ namespace Testproject
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            gameManager.Update(gameTime);
-
+            // TODO: Add your update logic here
+            _gameManager.Update(gameTime);
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            gameManager.Draw(gameTime);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            // Draw sprites
+            _spriteBatch.Begin();
+            _gameManager.Draw(_spriteBatch);
+            _spriteBatch.End();
+            // End draw sprites
 
             base.Draw(gameTime);
         }

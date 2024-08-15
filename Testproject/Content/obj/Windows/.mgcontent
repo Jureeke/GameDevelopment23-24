@@ -4,13 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/Font.spritefont</File>
-    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/Space Background.png</File>
-    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/SpaceHero2SpriteSheet.png</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/../../../../../Users/tibov/Desktop/test/Map/lv1.tmx</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/../../../../../Users/tibov/Desktop/test/Map/lv2.tmx</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/../../../../../Users/tibov/Desktop/test/Map/morning_adventures_tileset_16x16.png</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/../../../../../Users/tibov/Desktop/test/Map/tilesX4.tsx</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
+    <File>lv1.tmx</File>
+    <File>lv2.tmx</File>
+    <File>morning_adventures_tileset_16x16.png</File>
+    <File>tilesX4.tsx</File>
   </DestFiles>
 </SourceFileCollection>

@@ -7,21 +7,43 @@ using System.Threading.Tasks;
 
 namespace Testproject.Utility.StateMachine
 {
-    public abstract class State : IState
+    public abstract class State
     {
-        protected Game1 game;
-        protected GameManager gameManager;
+        public StateMachine StateMachine;
+        public bool isActive { get; private set; }
 
-        public State(Game1 game, GameManager gameManager)
+        public State()
         {
-            this.game = game;
-            this.gameManager = gameManager;
+
         }
 
-        public abstract void Enter();
-        public abstract void Exit();
-        public abstract void Update(GameTime gameTime);
-        public abstract void Draw(GameTime gameTime);
-    }
+        public State(StateMachine stateMachine)
+        {
+            StateMachine = stateMachine;
+        }
 
+        public void Activate()
+        {
+            if (isActive) return;
+            isActive = true;
+            OnPreActivate();
+            OnActivate();
+        }
+
+        public void Deactivate()
+        {
+            if (!isActive) return;
+            OnPreDeactivate();
+            OnDeactivate();
+            OnLateDeactivate();
+            isActive = false;
+        }
+
+        public virtual void OnPreActivate() { }
+        protected abstract void OnActivate();
+        public virtual void OnUpdate(GameTime time) { }
+        public virtual void OnPreDeactivate() { }
+        protected abstract void OnDeactivate();
+        public virtual void OnLateDeactivate() { }
+    }
 }

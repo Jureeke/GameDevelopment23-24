@@ -5,10 +5,12 @@
   <Config />
   <SourceFiles>
     <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/Font.spritefont</File>
-    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/Space Background.png</File>
-    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/SpaceHero2SpriteSheet.png</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/origbig.png</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/Tiles_4x.png</File>
+    <File>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/TilesX4.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

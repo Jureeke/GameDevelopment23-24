@@ -1,44 +1,43 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Testproject.UI.Elements;
 using System;
-using Testproject.Core.GameStates;
-using Testproject;
-using Testproject.Utility.StateMachine;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Testproject.UI;
 
-public class DeathState : State
+namespace Testproject.Core.GameStates
 {
-    private Button mainMenuButton;
-    private Texture2D buttonTexture;
-
-    public DeathState(Game1 game, GameManager gameManager) : base(game, gameManager)
+    public class DeathState : GameState
     {
-        buttonTexture = new Texture2D(game.GraphicsDevice, 1, 1);
-        buttonTexture.SetData(new[] { Color.White });
-        mainMenuButton = new Button("Main Menu", new Vector2(game.GraphicsDevice.Viewport.Width / 2, game.GraphicsDevice.Viewport.Height / 2), game.Font, buttonTexture, OnMainMenuButtonClick);
-    }
+        private DeathScreen _screen;
+        private GameManager _game;
 
-    public override void Enter() { }
+        public DeathState(GameManager game)
+        {
+            _game = game;
+            _screen = new DeathScreen(_game);
+        }
 
-    public override void Exit() { }
+        protected override void OnActivate()
+        {
 
-    public override void Update(GameTime gameTime)
-    {
-        mainMenuButton.Update(gameTime);
-    }
+        }
 
-    public override void Draw(GameTime gameTime)
-    {
-        game.GraphicsDevice.Clear(Color.Red);
+        protected override void OnDeactivate()
+        {
 
-        game.SpriteBatch.Begin();
-        mainMenuButton.Draw(game.SpriteBatch);
-        game.SpriteBatch.End();
-    }
+        }
 
-    private void OnMainMenuButtonClick(object sender, EventArgs e)
-    {
-        gameManager.ChangeState(new MainMenuState(game, gameManager));
+        public override void OnUpdate(GameTime time)
+        {
+            _screen.Update(time);
+        }
+
+        public override void OnDraw(SpriteBatch batch)
+        {
+            _screen.Draw(batch);
+        }
     }
 }

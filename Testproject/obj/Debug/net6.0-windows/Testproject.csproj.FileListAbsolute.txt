@@ -46,8 +46,6 @@ C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-wind
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.dll
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\refint\Testproject.dll
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.pdb
-C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Space Background.xnb
-C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\SpaceHero2SpriteSheet.xnb
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.exe
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.deps.json
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.runtimeconfig.json
@@ -78,3 +76,10 @@ C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-wind
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.genruntimeconfig.cache
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\ref\Testproject.dll
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Font.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Autofac.dll
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\MonoGame.Extended.dll
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\MonoGame.Extended.Content.Pipeline.dll
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\TiledSharp.dll
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\origbig.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\TilesX4.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Tiles_4x.xnb

@@ -1,49 +1,42 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Testproject.Utility.StateMachine;
-using Testproject.UI.Elements;
+using Testproject.UI;
 
 namespace Testproject.Core.GameStates
 {
-    public class MainMenuState : State
+    public class MainMenuState : GameState
     {
-        private Button startButton;
-        private Texture2D buttonTexture;
+        private StartScreen _screen;
+        private GameManager _game;
 
-        public MainMenuState(Game1 game, GameManager gameManager) : base(game, gameManager)
+        public MainMenuState(GameManager game)
         {
-            buttonTexture = new Texture2D(game.GraphicsDevice, 1, 1);
-            buttonTexture.SetData(new[] { Color.White });
-            startButton = new Button("Start", new Vector2(game.GraphicsDevice.Viewport.Width / 2, game.GraphicsDevice.Viewport.Height / 2), game.Font, buttonTexture, OnStartButtonClick);
+            _game = game;
+            _screen = new StartScreen(_game);
+        }
+        protected override void OnActivate()
+        {
+
         }
 
-
-        public override void Enter() { }
-
-        public override void Exit() { }
-
-        public override void Update(GameTime gameTime)
+        protected override void OnDeactivate()
         {
-            startButton.Update(gameTime);
+
         }
 
-        public override void Draw(GameTime gameTime)
+        public override void OnUpdate(GameTime time)
         {
-            game.GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            game.SpriteBatch.Begin();
-            startButton.Draw(game.SpriteBatch);
-            game.SpriteBatch.End();
+            _screen.Update(time);
         }
 
-        private void OnStartButtonClick(object sender, EventArgs e)
+        public override void OnDraw(SpriteBatch batch)
         {
-            gameManager.ChangeState(new Level1State(game, gameManager));
+            _screen.Draw(batch);
         }
     }
 }

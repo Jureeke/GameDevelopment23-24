@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GameDevProject.Core;
+using GameDevProject.Core.Input;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -32,7 +34,7 @@ namespace Testproject
             _gameManager = new GameManager(this);
             _gameManager.Activate();
             base.Initialize();
-            hero = new Hero(_texture, new KeyboardReader(), new Vector2(0, 500), new Vector2(2, 2));
+            //hero = new Hero(_texture, new KeyboardReader(), new Vector2(0, 500), new Vector2(2, 2));
         }
 
         protected override void LoadContent()
@@ -41,7 +43,7 @@ namespace Testproject
 
             // TODO: use this.Content to load your game content here
 
-            _texture = Content.Load<Texture2D>("Gladiator-SpriteSheet");
+            //_texture = Content.Load<Texture2D>("Gladiator-SpriteSheet");
             //background = Content.Load<Texture2D>("Space Background");
         }
 

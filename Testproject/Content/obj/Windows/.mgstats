@@ -1,12 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-<<<<<<< HEAD
-"C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/BrainMoleMonarchSpriteSheet.png","C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/bin/Windows/BrainMoleMonarchSpriteSheet.xnb","TextureProcessor","Texture2DContent",17409,1032277,0,2940417
-"C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/GhoulSpriteSheet.png","C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/bin/Windows/GhoulSpriteSheet.xnb","TextureProcessor","Texture2DContent",28785,1474645,0,0794106
-"C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/Gladiator-SpriteSheet.png","C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/bin/Windows/Gladiator-SpriteSheet.xnb","TextureProcessor","Texture2DContent",25062,1474645,0,0825763
-"C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/ShardsoulSlayerSpriteSheet.png","C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/bin/Windows/ShardsoulSlayerSpriteSheet.xnb","TextureProcessor","Texture2DContent",61614,5898325,0,3233173
-=======
 "C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/../../../../../Users/tibov/Desktop/test/Map/../../../../../23-24/Game Development/morning_adventures_tileset_16x16 X4.png","C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/bin/Windows/../../../morning_adventures_tileset_16x16 X4_1.xnb","TextureProcessor","Texture2DContent",80042,983125,0,0237491
 "C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/../../../../../Users/tibov/Desktop/test/Map/tilesX4.tsx","C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/bin/Windows/tilesX4.xnb","TiledMapTilesetProcessor","TiledMapTilesetContentItem",297,217,0,0251876
 "C:/Users/tibov/Desktop/test/Map/../../../../../23-24/Game Development/morning_adventures_tileset_16x16 X4.png","C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/bin/Windows/../../../morning_adventures_tileset_16x16 X4_0.xnb","TextureProcessor","Texture2DContent",80042,983125,0,1121825
 "C:/Users/tibov/Desktop/test/Map/tilesX4.tsx","C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/bin/Windows/../../../../../Users/tibov/Desktop/test/Map/tilesX4_0.xnb","TiledMapTilesetProcessor","TiledMapTilesetContentItem",297,256,0,1457033
->>>>>>> screens/level

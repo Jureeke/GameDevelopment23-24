@@ -14,9 +14,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-<<<<<<< HEAD
-#begin BrainMoleMonarchSpriteSheet.png
-=======
 #begin Font.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -25,7 +22,6 @@
 /build:Font.spritefont
 
 #begin origbig.png
->>>>>>> screens/level
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,7 +31,6 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-<<<<<<< HEAD
 /build:BrainMoleMonarchSpriteSheet.png
 
 #begin GhoulSpriteSheet.png
@@ -73,9 +68,7 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:ShardsoulSlayerSpriteSheet.png
-=======
 /build:origbig.png
->>>>>>> screens/level
 
 #begin Tiles_4x.png
 /importer:TextureImporter

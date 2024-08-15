@@ -75,7 +75,6 @@ C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-wind
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproj.126AFAC9.Up2Date
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\Testproject.genruntimeconfig.cache
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\ref\Testproject.dll
-<<<<<<< HEAD
 C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\SpaceHero2SpriteSheet.xnb
 C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.exe
 C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Testproject.deps.json
@@ -118,13 +117,11 @@ C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\
 C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GhoulSpriteSheet.xnb
 C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Gladiator-SpriteSheet.xnb
 C:\Users\vincentjure\Desktop\GameDev\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\ShardsoulSlayerSpriteSheet.xnb
-=======
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Font.xnb
-C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Autofac.dll
-C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\MonoGame.Extended.dll
-C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\MonoGame.Extended.Content.Pipeline.dll
-C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\TiledSharp.dll
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\origbig.xnb
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\TilesX4.xnb
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Tiles_4x.xnb
->>>>>>> screens/level
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\BrainMoleMonarchSpriteSheet.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GhoulSpriteSheet.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Gladiator-SpriteSheet.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\ShardsoulSlayerSpriteSheet.xnb

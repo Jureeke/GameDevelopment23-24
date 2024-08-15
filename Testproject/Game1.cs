@@ -32,23 +32,17 @@ namespace Testproject
             _gameManager = new GameManager(this);
             _gameManager.Activate();
             base.Initialize();
-<<<<<<< HEAD
             hero = new Hero(_texture, new KeyboardReader(), new Vector2(0, 500), new Vector2(2, 2));
-=======
->>>>>>> screens/level
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-<<<<<<< HEAD
 
             // TODO: use this.Content to load your game content here
 
             _texture = Content.Load<Texture2D>("Gladiator-SpriteSheet");
             //background = Content.Load<Texture2D>("Space Background");
-=======
->>>>>>> screens/level
         }
 
         protected override void Update(GameTime gameTime)

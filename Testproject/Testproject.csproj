@@ -10,7 +10,17 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <MonoGameExtendedPipelineReferencePath>$(MSBuildThisFileDirectory)pipeline-references</MonoGameExtendedPipelineReferencePath>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Content\Map\**" />
+    <EmbeddedResource Remove="Content\Map\**" />
+    <None Remove="Content\Map\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Content\lv1..tmx" />
+    <None Remove="Font.xml" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />

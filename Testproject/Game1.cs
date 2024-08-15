@@ -1,49 +1,54 @@
-﻿using GameDevProject.Core;
-using GameDevProject.Core.Input;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using System.Reflection.Metadata;
+using Testproject.Core.GameStates;
+using Testproject.Map.Tiles;
 
 namespace Testproject
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager _graphics;
+        public GraphicsDeviceManager GraphicsDeviceManager;
         private SpriteBatch _spriteBatch;
 
-        private Texture2D _texture;
-        private Texture2D background;
-        private Hero hero;
-
+        private GameManager _gameManager;
 
         public Game1()
         {
-            _graphics = new GraphicsDeviceManager(this);
+            GraphicsDeviceManager = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
-            //Windowscreen
-            _graphics.PreferredBackBufferWidth = 1440;
-            _graphics.PreferredBackBufferHeight = 810;
-            _graphics.ApplyChanges();
+            GraphicsDeviceManager.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            GraphicsDeviceManager.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            GraphicsDeviceManager.IsFullScreen = true;
+            GraphicsDeviceManager.HardwareModeSwitch = false;
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            _gameManager = new GameManager(this);
+            _gameManager.Activate();
             base.Initialize();
+<<<<<<< HEAD
             hero = new Hero(_texture, new KeyboardReader(), new Vector2(0, 500), new Vector2(2, 2));
+=======
+>>>>>>> screens/level
         }
-
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+<<<<<<< HEAD
 
             // TODO: use this.Content to load your game content here
 
             _texture = Content.Load<Texture2D>("Gladiator-SpriteSheet");
             //background = Content.Load<Texture2D>("Space Background");
+=======
+>>>>>>> screens/level
         }
 
         protected override void Update(GameTime gameTime)
@@ -52,19 +57,19 @@ namespace Testproject
                 Exit();
 
             // TODO: Add your update logic here
-
-
-            hero.Update(gameTime);
+            _gameManager.Update(gameTime);
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.White);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            // Draw sprites
             _spriteBatch.Begin();
-            //_spriteBatch.Draw(background, GraphicsDevice.Viewport.Bounds, Color.White); //Background
-            hero.Draw(_spriteBatch);
+            _gameManager.Draw(_spriteBatch);
             _spriteBatch.End();
+            // End draw sprites
 
             base.Draw(gameTime);
         }

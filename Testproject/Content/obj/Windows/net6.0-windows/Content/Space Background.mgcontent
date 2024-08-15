@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<<<<<<< HEAD
-  <SourceFile>C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/SpaceHero2SpriteSheet.png</SourceFile>
-  <SourceTime>2024-07-16T13:13:18.5196248+02:00</SourceTime>
-  <DestFile>C:/Users/vincentjure/Desktop/GameDev/GameDevelopment23-24/Testproject/Content/bin/Windows/SpaceHero2SpriteSheet.xnb</DestFile>
-  <DestTime>2024-07-18T21:26:12.4328406+02:00</DestTime>
-=======
-  <SourceFile>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/SpaceHero2SpriteSheet.png</SourceFile>
-  <SourceTime>2024-07-16T13:18:06.3376795+02:00</SourceTime>
-  <DestFile>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/bin/Windows/SpaceHero2SpriteSheet.xnb</DestFile>
-  <DestTime>2024-07-16T21:47:58.1409929+02:00</DestTime>
->>>>>>> screens/level
+  <SourceFile>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/Space Background.png</SourceFile>
+  <SourceTime>2024-07-20T21:21:22.5339384+02:00</SourceTime>
+  <DestFile>C:/23-24/Game Development/GameDevelopment23-24/Testproject/Content/bin/Windows/Content/Space Background.xnb</DestFile>
+  <DestTime>2024-08-14T14:06:15.0441933+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "1t3TLWMlOJw=",
+  "dgSpecHash": "aAUSjXcss4M=",
   "success": true,
   "projectFilePath": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Testproject.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\tibov\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\microsoft.codeanalysis.common\\1.3.0\\microsoft.codeanalysis.common.1.3.0.nupkg.sha512",
@@ -24,8 +23,6 @@
     "C:\\Users\\tibov\\.nuget\\packages\\microsoft.win32.primitives\\4.0.1\\microsoft.win32.primitives.4.0.1.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\microsoft.win32.registry\\4.0.0\\microsoft.win32.registry.4.0.0.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-    "C:\\Users\\tibov\\.nuget\\packages\\monogame.extended\\4.0.0\\monogame.extended.4.0.0.nupkg.sha512",
-    "C:\\Users\\tibov\\.nuget\\packages\\monogame.extended.content.pipeline\\4.0.0\\monogame.extended.content.pipeline.4.0.0.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\monogame.framework.windowsdx\\3.8.1.303\\monogame.framework.windowsdx.3.8.1.303.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\netstandard.library\\1.6.0\\netstandard.library.1.6.0.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
@@ -127,8 +124,7 @@
     "C:\\Users\\tibov\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\system.xml.xmldocument\\4.0.1\\system.xml.xmldocument.4.0.1.nupkg.sha512",
     "C:\\Users\\tibov\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
-    "C:\\Users\\tibov\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512",
-    "C:\\Users\\tibov\\.nuget\\packages\\tiledsharp\\1.0.1\\tiledsharp.1.0.1.nupkg.sha512"
+    "C:\\Users\\tibov\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512"
   ],
   "logs": []
 }

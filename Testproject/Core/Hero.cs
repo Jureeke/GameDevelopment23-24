@@ -1,15 +1,7 @@
 ﻿using GameDevProject.Core.Input;
 using GameDevProject.Core.Movement;
-using GameDevProject.Utility.Animation;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using SharpDX.Direct3D9;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Testproject;
 
 namespace GameDevProject.Core

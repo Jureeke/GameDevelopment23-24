@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
-using Testproject.UI.Elements;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Testproject.Core.GameStates;
+using Testproject.UI.Elements;
 
 namespace Testproject.UI
 {

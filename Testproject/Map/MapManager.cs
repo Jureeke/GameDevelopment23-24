@@ -1,16 +1,9 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
-using MonoGame.Extended.Tiled;
-using System;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Testproject.Core.GameStates;
+using System.Diagnostics;
 using Testproject.Map.Levels;
 using Testproject.Map.Tiles;
-using Microsoft.VisualBasic.Devices;
-using System.Diagnostics;
 
 namespace Testproject.Map
 {

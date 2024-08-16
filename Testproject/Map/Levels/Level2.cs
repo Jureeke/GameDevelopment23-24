@@ -52,7 +52,7 @@ namespace Testproject.Map.Levels
             {BL,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BR },
         };
 
-        public Vector2 SpawnLocation { get; set; } = new(1, 280);
+        public Vector2 SpawnLocation { get; set; }
         public Texture2D Background { get; set; }
 
         public Level2(GameManager game)

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Testproject.Map.Levels;
@@ -21,7 +22,7 @@ namespace Testproject.Map
 
         private readonly TileFactory _tileFactory;
 
-        private readonly List<ILevel> _levels = new();
+        public readonly List<ILevel> _levels = new();
         public ILevel ActiveLevel;
 
         public MapManager(GameManager game)
@@ -31,12 +32,15 @@ namespace Testproject.Map
 
             TileWidth = _game.RootGame.GraphicsDeviceManager.PreferredBackBufferWidth / _horizontalTiles;
             TileHeight = _game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight / _verticalTiles;
+        }
 
+        public void Setup()
+        {
             // Registering levels
             _levels.Add(new Level1(_game));
             _levels.Add(new Level2(_game));
 
-            // Setting active level
+            // Setting the initial active level
             ActiveLevel = _levels[0];
         }
 
@@ -68,7 +72,6 @@ namespace Testproject.Map
 
         public void RenderMap(SpriteBatch batch)
         {
-
             // Background
             batch.Draw(ActiveLevel.Background, new Rectangle(0, 0, _game.RootGame.GraphicsDeviceManager.PreferredBackBufferWidth, _game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight), Color.White);
 

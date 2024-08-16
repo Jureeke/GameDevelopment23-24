@@ -2,14 +2,16 @@
 using GameDevProject.Core.Movement;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Testproject;
 
 namespace GameDevProject.Core
 {
     public class Hero : IGameObject, IMovable
     {
-        private Texture2D texture;
+        public Texture2D texture;
         private Animation animation;
+        public Vector2 spawnPosition = new Vector2(0,0);
 
         private GameManager Game;
 
@@ -34,21 +36,39 @@ namespace GameDevProject.Core
 
             animation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
 
-            ((IMovable)this).Position = new Vector2(1,1);
-            ((IMovable)this).Speed = new Vector2(2,2);
+            // Calculate the spawn position to be in the bottom-left corner
+            spawnPosition = new Vector2(0, Game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - 192 -27  - 192);
+
+
+            // Set the hero's initial position to the calculated spawn position
+            Position = spawnPosition;
+
+            // Set other properties
+            Speed = new Vector2(4, 2); // doubled the speed
             ((IMovable)this).inputReader = new KeyboardReader();
 
-            gravity = 1000f;
+            gravity = 1000f; // if changed to half can jump 2 blocks
             isJumping = false;
             jumpStrength = 450f;
             groundLevel = Position.Y;
         }
 
+        // Method to reset the hero's position when starting a level
+        public void ResetPosition()
+        {
+            Position = spawnPosition;
+            groundLevel = Position.Y;
+        }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            SpriteEffects spriteeffect = ((IMovable)this).Direction.X >= 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-            spriteBatch.Draw(texture, ((IMovable)this).Position, animation.CurrentFrame.SourceRectangle, Color.White, 0, Vector2.Zero, 1f, spriteeffect, 0f);
+            if (animation.CurrentFrame == null)
+            {
+                throw new InvalidOperationException("CurrentFrame is null. Ensure that the animation is initialized properly.");
+            }
+
+            SpriteEffects spriteEffect = Direction.X >= 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            spriteBatch.Draw(texture, Position, animation.CurrentFrame.SourceRectangle, Color.White, 0, Vector2.Zero, 1.5f, spriteEffect, 0f);
         }
 
         public void Update(GameTime gameTime)

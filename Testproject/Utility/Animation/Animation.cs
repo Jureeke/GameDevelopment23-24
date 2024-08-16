@@ -1,5 +1,6 @@
 ﻿using GameDevProject.Utility.Animation;
 using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 
 namespace Testproject
@@ -11,20 +12,30 @@ namespace Testproject
         private int counter;
 
         private double secondCounter = 0;
+
         public Animation()
         {
             frames = new List<AnimationFrame>();
+            counter = 0;
         }
 
         public void AddFrame(AnimationFrame frame)
         {
             frames.Add(frame);
-            CurrentFrame = frames[0];
+
+            // Set CurrentFrame to the first frame if it hasn't been set yet
+            if (CurrentFrame == null && frames.Count > 0)
+            {
+                CurrentFrame = frames[0];
+            }
         }
 
         public void Update(GameTime gameTime)
         {
-            CurrentFrame = frames[counter];
+            if (frames.Count == 0)
+            {
+                throw new InvalidOperationException("No frames have been added to the animation.");
+            }
 
             secondCounter += gameTime.ElapsedGameTime.TotalSeconds;
             int fps = 15;
@@ -38,21 +49,29 @@ namespace Testproject
             {
                 counter = 0;
             }
+
+            CurrentFrame = frames[counter];
         }
 
-        public void GetFramesFromTextureProperties(int widthSpriteSheet, int heightSpriteSsheet, int numberOfWidthSprites, int numberOfHeigtSprites, int length, int height)
+        public void GetFramesFromTextureProperties(int widthSpriteSheet, int heightSpriteSheet, int numberOfWidthSprites, int numberOfHeightSprites, int length, int height)
         {
-            int widthOffFrame = widthSpriteSheet / numberOfWidthSprites;
-            int heightOffFrame = heightSpriteSsheet / numberOfHeigtSprites;
+            int widthOfFrame = widthSpriteSheet / numberOfWidthSprites;
+            int heightOfFrame = heightSpriteSheet / numberOfHeightSprites;
 
-            int useHeight = heightOffFrame * height; //Array index denken
+            int useHeight = heightOfFrame * height; // Calculate starting height
 
             for (int i = 0; i < length; i++)
             {
-                for (int x = 0; x < widthOffFrame * length; x += widthOffFrame)
+                for (int x = 0; x < widthSpriteSheet; x += widthOfFrame)
                 {
-                    frames.Add(new AnimationFrame(new Rectangle(x, useHeight, widthOffFrame, heightOffFrame)));
+                    frames.Add(new AnimationFrame(new Rectangle(x, useHeight, widthOfFrame, heightOfFrame)));
                 }
+            }
+
+            // Set the CurrentFrame to the first frame if frames were added
+            if (frames.Count > 0)
+            {
+                CurrentFrame = frames[0];
             }
         }
     }

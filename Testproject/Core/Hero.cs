@@ -6,10 +6,12 @@ using Testproject;
 
 namespace GameDevProject.Core
 {
-    internal class Hero : IGameObject, IMovable
+    public class Hero : IGameObject, IMovable
     {
         private Texture2D texture;
         private Animation animation;
+
+        private GameManager Game;
 
         private MovementManager movementManager;
 
@@ -23,22 +25,23 @@ namespace GameDevProject.Core
         private float jumpStrength;
         private float groundLevel;
 
-        public Hero(Texture2D texture, IInputReader inputReader, Vector2 postiiton, Vector2 speed)
+        public Hero(GameManager manager)
         {
-            this.texture = texture;
+            this.Game = manager;
+            this.texture = Game.RootGame.Content.Load<Texture2D>("Gladiator-SpriteSheet");
             animation = new Animation();
             movementManager = new MovementManager();
 
             animation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
 
-            ((IMovable)this).Position = postiiton;
-            ((IMovable)this).Speed = speed;
-            ((IMovable)this).inputReader = inputReader;
+            ((IMovable)this).Position = new Vector2(1,1);
+            ((IMovable)this).Speed = new Vector2(2,2);
+            ((IMovable)this).inputReader = new KeyboardReader();
 
             gravity = 1000f;
             isJumping = false;
             jumpStrength = 450f;
-            groundLevel = postiiton.Y;
+            groundLevel = Position.Y;
         }
 
 

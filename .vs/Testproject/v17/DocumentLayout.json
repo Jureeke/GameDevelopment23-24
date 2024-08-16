@@ -3,34 +3,28 @@
   "WorkspaceRootPath": "C:\\23-24\\Game Development\\GameDevelopment23-24\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tibov\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\build\\MonoGame.Content.Builder.Task.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\input\\keyboardreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\input\\keyboardreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\utility\\animation\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\utility\\animation\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\gamestates\\playingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\gamestates\\playingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\utility\\animation\\animationframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\utility\\animation\\animationframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\igameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\igameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\input\\iinputreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -56,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,69 +62,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AQIAAJ0VAAAAAAAAAAAAwKsVAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-08-15T14:18:01.787Z",
+              "DocumentIndex": 4,
+              "Title": "PlayingState.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameStates\\PlayingState.cs",
+              "RelativeDocumentMoniker": "Testproject\\Core\\GameStates\\PlayingState.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameStates\\PlayingState.cs",
+              "RelativeToolTip": "Testproject\\Core\\GameStates\\PlayingState.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwCAAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T11:53:46.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameManager.cs",
+              "RelativeDocumentMoniker": "Testproject\\Core\\GameManager.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameManager.cs",
+              "RelativeToolTip": "Testproject\\Core\\GameManager.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAowBQAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T11:29:41.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MonoGame.Content.Builder.Task.targets",
-              "DocumentMoniker": "C:\\Users\\tibov\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\build\\MonoGame.Content.Builder.Task.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\Users\\tibov\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\build\\MonoGame.Content.Builder.Task.targets",
-              "ToolTip": "C:\\Users\\tibov\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\build\\MonoGame.Content.Builder.Task.targets",
-              "RelativeToolTip": "..\\..\\..\\Users\\tibov\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\build\\MonoGame.Content.Builder.Task.targets",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAAwI0AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-08-15T14:12:51.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Animation.cs",
-              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\Animation.cs",
-              "RelativeDocumentMoniker": "Testproject\\Utility\\Animation\\Animation.cs",
-              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\Animation.cs",
-              "RelativeToolTip": "Testproject\\Utility\\Animation\\Animation.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAYwA0AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:36:16.103Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IGameObject.cs",
-              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\IGameObject.cs",
-              "RelativeDocumentMoniker": "Testproject\\Core\\IGameObject.cs",
-              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\IGameObject.cs",
-              "RelativeToolTip": "Testproject\\Core\\IGameObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T19:20:19.157Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Hero.cs",
               "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\Hero.cs",
               "RelativeDocumentMoniker": "Testproject\\Core\\Hero.cs",
               "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\Hero.cs",
               "RelativeToolTip": "Testproject\\Core\\Hero.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA7wAgAAAATAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAkwCsAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:36:26.438Z"
+              "WhenOpened": "2024-07-16T11:36:26.438Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "KeyboardReader.cs",
               "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\Input\\KeyboardReader.cs",
               "RelativeDocumentMoniker": "Testproject\\Core\\Input\\KeyboardReader.cs",
@@ -143,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "IInputReader.cs",
               "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\Input\\IInputReader.cs",
               "RelativeDocumentMoniker": "Testproject\\Core\\Input\\IInputReader.cs",
@@ -155,13 +126,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Game1.cs",
               "RelativeDocumentMoniker": "Testproject\\Game1.cs",
               "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Game1.cs",
               "RelativeToolTip": "Testproject\\Game1.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAmwCQAAAAeAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAqwDAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-16T11:37:36.111Z",
               "EditorCaption": ""
@@ -180,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "MovementManager.cs",
               "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\Movement\\MovementManager.cs",
               "RelativeDocumentMoniker": "Testproject\\Core\\Movement\\MovementManager.cs",
@@ -192,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "app.manifest",
               "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\app.manifest",
               "RelativeDocumentMoniker": "Testproject\\app.manifest",
@@ -204,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "Icon.ico -  [English (United States)] - Icon [256x256, 32 bit, PNG]",
               "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Icon.ico",
               "RelativeDocumentMoniker": "Testproject\\Icon.ico",

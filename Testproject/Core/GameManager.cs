@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GameDevProject.Core;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Testproject;
@@ -10,12 +11,14 @@ public class GameManager : StateMachine, IGameObject
 {
     public Game1 RootGame;
     public MapManager MapManager;
+    public Hero hero;
 
     public GameManager(Game1 game)
     {
 
         RootGame = game;
         MapManager = new MapManager(this);
+        hero = new Hero(this);
 
         AddState(new MainMenuState(this));
         AddState(new PlayingState(this));

@@ -25,11 +25,13 @@ namespace Testproject.Core.GameStates
         public override void OnUpdate(GameTime time)
         {
             _manager.MapManager.Update(time);
+            _manager.hero.Update(time);
         }
 
         public override void OnDraw(SpriteBatch batch)
         {
             _manager.MapManager.RenderMap(batch);
+            _manager.hero.Draw(batch);
         }
     }
 }

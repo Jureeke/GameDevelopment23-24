@@ -13,12 +13,18 @@ public class GameManager : StateMachine, IGameObject
     public MapManager MapManager;
     public Hero hero;
 
+    public int height; 
+    public int width;
+
     public GameManager(Game1 game)
     {
 
         RootGame = game;
         MapManager = new MapManager(this);
+        height = game.GraphicsDevice.Viewport.Height;
+        width = game.GraphicsDevice.Viewport.Width;
         hero = new Hero(this);
+        MapManager.Setup();
 
         AddState(new MainMenuState(this));
         AddState(new PlayingState(this));
@@ -29,12 +35,12 @@ public class GameManager : StateMachine, IGameObject
 
     protected override void OnActivate()
     {
+
         // Go to the main menu
         GoToState<MainMenuState>();
 
         // Load in the maps
         MapManager.CreateLevelMap();
-
         // Other misc map stuff
         MapManager.LoadMapParameters();
     }
@@ -52,7 +58,6 @@ public class GameManager : StateMachine, IGameObject
     public void Update(GameTime time)
     {
         ActiveState?.OnUpdate(time);
-
         
         if (Keyboard.GetState().IsKeyDown(Keys.M))
         {
@@ -62,7 +67,7 @@ public class GameManager : StateMachine, IGameObject
         {
             GoToState<DeathState>();
         }
-        else if (Keyboard.GetState().IsKeyDown(Keys.Space) && ActiveState is PlayingState playingState)
+        else if (Keyboard.GetState().IsKeyDown(Keys.Enter) && ActiveState is PlayingState playingState)
         {
             MapManager.GoToNextLevel();
         }

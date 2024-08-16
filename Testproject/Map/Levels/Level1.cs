@@ -46,12 +46,13 @@ namespace Testproject.Map.Levels
             {BL,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BR },
         };
 
-        public Vector2 SpawnLocation { get; set; } = new(1, 280);
         public Texture2D Background { get; set; }
 
         public Level1(GameManager game)
         {
             _game = game;
+            _game.hero.ResetPosition(); // Reset the hero's position to the spawn point
+
             Background = _game.RootGame.Content.Load<Texture2D>("origbig");
         }
     }

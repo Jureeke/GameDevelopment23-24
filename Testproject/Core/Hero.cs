@@ -4,17 +4,17 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Testproject;
+using Testproject.Utility;
 
 namespace GameDevProject.Core
 {
     public class Hero : IGameObject, IMovable
     {
         public Texture2D texture;
-        private Animation animation;
-        public Vector2 spawnPosition = new Vector2(0,0);
+        private HeroAnimationManager animationManager;
 
+        public Vector2 spawnPosition = new Vector2(0, 0);
         private GameManager Game;
-
         private MovementManager movementManager;
 
         public Vector2 Position { get; set; }
@@ -29,16 +29,16 @@ namespace GameDevProject.Core
 
         public Hero(GameManager manager)
         {
-            this.Game = manager;
-            this.texture = Game.RootGame.Content.Load<Texture2D>("Gladiator-SpriteSheet");
-            animation = new Animation();
+            Game = manager;
+            texture = Game.RootGame.Content.Load<Texture2D>("Gladiator-SpriteSheet");
             movementManager = new MovementManager();
+            animationManager = new HeroAnimationManager(texture);
 
-            animation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
+            // Setup animaties
+            SetupAnimations();
 
             // Calculate the spawn position to be in the bottom-left corner
-            spawnPosition = new Vector2(0, Game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - 192 -27  - 192);
-
+            spawnPosition = new Vector2(0, Game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - 192 - 27 - 192);
 
             // Set the hero's initial position to the calculated spawn position
             Position = spawnPosition;
@@ -47,10 +47,23 @@ namespace GameDevProject.Core
             Speed = new Vector2(4, 2); // doubled the speed
             ((IMovable)this).inputReader = new KeyboardReader();
 
-            gravity = 1000f; // if changed to half can jump 2 blocks
+            gravity = 1000f;
             isJumping = false;
             jumpStrength = 450f;
             groundLevel = Position.Y;
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            animationManager.Draw(spriteBatch, texture, Position, Direction);
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            var direction = ((IMovable)this).inputReader.Readinput();
+            UpdateAnimation(gameTime, direction);
+            Move();
+            UpdateJump(gameTime);
         }
 
         // Method to reset the hero's position when starting a level
@@ -60,22 +73,31 @@ namespace GameDevProject.Core
             groundLevel = Position.Y;
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        private void SetupAnimations()
         {
-            if (animation.CurrentFrame == null)
-            {
-                throw new InvalidOperationException("CurrentFrame is null. Ensure that the animation is initialized properly.");
-            }
-
-            SpriteEffects spriteEffect = Direction.X >= 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-            spriteBatch.Draw(texture, Position, animation.CurrentFrame.SourceRectangle, Color.White, 0, Vector2.Zero, 1.5f, spriteEffect, 0f);
+            animationManager.SetAnimation("Idle");
+            animationManager.Update(new GameTime(), Speed); // Force update to avoid initial flickering
         }
 
-        public void Update(GameTime gameTime)
+        private void UpdateAnimation(GameTime gameTime, Vector2 direction)
         {
-            animation.Update(gameTime);
-            Move();
-            UpdateJump(gameTime);
+            bool isMoving = direction.X != 0;
+            bool isSpecialAction = ((KeyboardReader)((IMovable)this).inputReader).IsSpecialActionTriggered();
+
+            if (isSpecialAction)
+            {
+                animationManager.SetAnimation("Attack");
+            }
+            else if (isMoving)
+            {
+                animationManager.SetAnimation("Walk");
+            }
+            else
+            {
+                animationManager.SetAnimation("Idle");
+            }
+
+            animationManager.Update(gameTime, Speed);
         }
 
         private void Move()

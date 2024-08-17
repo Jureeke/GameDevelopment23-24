@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Drawing;
 using System.Reflection.Metadata;
 using Testproject.Core.GameStates;
 using Testproject.Map.Tiles;
@@ -53,7 +54,7 @@ namespace Testproject
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Microsoft.Xna.Framework.Color.CornflowerBlue);
 
             // Draw sprites
             _spriteBatch.Begin();

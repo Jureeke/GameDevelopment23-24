@@ -21,7 +21,13 @@ namespace GameDevProject.Core.Input
             {
                 direction.Y -= 1;
             }
+
             return direction;
+        }
+
+        public bool IsSpecialActionTriggered()
+        {
+            return Keyboard.GetState().IsKeyDown(Keys.V);
         }
     }
 }

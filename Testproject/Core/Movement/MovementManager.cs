@@ -13,16 +13,20 @@ namespace Testproject
         public void Move(IMovable movable)
         {
             var direction = movable.inputReader.Readinput();
-
             movable.Direction = direction;
 
+            // Handle jumping
             if (direction.Y < 0)
             {
                 movable.Jump();
             }
 
-            var distance = direction * movable.Speed;
-            movable.Position += new Vector2(distance.X, 0);
+            // Move only horizontally based on input
+            if (direction.X != 0)
+            {
+                var distance = direction * movable.Speed;
+                movable.Position += new Vector2(distance.X, 0);
+            }
         }
     }
 }

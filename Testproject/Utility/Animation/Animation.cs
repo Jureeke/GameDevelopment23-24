@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Testproject
 {
-    internal class Animation
+    public class Animation
     {
         public AnimationFrame CurrentFrame { get; set; }
         private List<AnimationFrame> frames;
@@ -67,7 +67,7 @@ namespace Testproject
                     frames.Add(new AnimationFrame(new Rectangle(x, useHeight, widthOfFrame, heightOfFrame)));
                 }
             }
-
+ 
             // Set the CurrentFrame to the first frame if frames were added
             if (frames.Count > 0)
             {

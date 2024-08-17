@@ -2,7 +2,7 @@
 
 namespace GameDevProject.Utility.Animation
 {
-    internal class AnimationFrame
+    public class AnimationFrame
     {
         public Rectangle SourceRectangle { get; set; }
 

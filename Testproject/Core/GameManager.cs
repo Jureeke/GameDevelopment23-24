@@ -3,8 +3,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Testproject;
+using Testproject.Core.Enemy;
 using Testproject.Core.GameStates;
 using Testproject.Map;
+using Testproject.Map.Levels;
 using Testproject.Utility.StateMachine;
 
 public class GameManager : StateMachine, IGameObject
@@ -12,7 +14,6 @@ public class GameManager : StateMachine, IGameObject
     public Game1 RootGame;
     public MapManager MapManager;
     public Hero hero;
-
     public int height; 
     public int width;
 

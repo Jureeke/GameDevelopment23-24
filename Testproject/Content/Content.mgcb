@@ -14,14 +14,31 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Font.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
+#begin background1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
 /processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:Font.spritefont
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:background1.png
 
-#begin origbig.png
+#begin background2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:background2.png
+
+#begin BrainMoleMonarchSpriteSheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -32,6 +49,13 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:BrainMoleMonarchSpriteSheet.png
+
+#begin Font.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Font.spritefont
 
 #begin GhoulSpriteSheet.png
 /importer:TextureImporter
@@ -57,6 +81,18 @@
 /processorParam:TextureFormat=Color
 /build:Gladiator-SpriteSheet.png
 
+#begin origbig.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:origbig.png
+
 #begin ShardsoulSlayerSpriteSheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -68,7 +104,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:ShardsoulSlayerSpriteSheet.png
-/build:origbig.png
 
 #begin Tiles_4x.png
 /importer:TextureImporter
@@ -81,18 +116,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Tiles_4x.png
-
-#begin TilesX4.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TilesX4.png
 
 #begin TilesX4.png
 /importer:TextureImporter

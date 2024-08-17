@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System.Collections.Generic;
+using Testproject.Core.Enemy;
 
 namespace Testproject.Map.Levels
 {
@@ -54,11 +56,32 @@ namespace Testproject.Map.Levels
 
         public Vector2 SpawnLocation { get; set; }
         public Texture2D Background { get; set; }
+        public List<Enemy> Enemies { get; set; }
 
         public Level2(GameManager game)
         {
             _game = game;
-            Background = _game.RootGame.Content.Load<Texture2D>("origbig");
+            Background = _game.RootGame.Content.Load<Texture2D>("background2");
+            Enemies = new List<Enemy>
+            {
+                new ShardsoulSlayer(game, new Vector2(350, 250)),
+            };
+
+        }
+        public void Update(GameTime gameTime)
+        {
+            foreach (var item in Enemies)
+            {
+                item.Update(gameTime);
+            }
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            foreach (var item in Enemies)
+            {
+                item.Draw(spriteBatch);
+            }
         }
     }
 }

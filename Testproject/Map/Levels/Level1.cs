@@ -1,5 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+using Testproject.Core.Enemy;
 
 namespace Testproject.Map.Levels
 {
@@ -47,13 +50,35 @@ namespace Testproject.Map.Levels
         };
 
         public Texture2D Background { get; set; }
+        public List<Enemy> Enemies { get; set; }
 
         public Level1(GameManager game)
         {
             _game = game;
             _game.hero.ResetPosition(); // Reset the hero's position to the spawn point
 
-            Background = _game.RootGame.Content.Load<Texture2D>("origbig");
+            Background = _game.RootGame.Content.Load<Texture2D>("background1");
+            Enemies = new List<Enemy>
+            {
+                new ShardsoulSlayer(game, new Vector2(20, 155)),
+                new Ghoul(game, new Vector2(150, 20))
+            };
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            foreach (var item in Enemies)
+            {
+                item.Update(gameTime);
+            }
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            foreach (var item in Enemies)
+            {
+                item.Draw(spriteBatch);
+            }
         }
     }
 }

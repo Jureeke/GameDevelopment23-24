@@ -11,17 +11,12 @@ namespace Testproject.Map
     public class MapManager
     {
         private readonly GameManager _game;
-
         private readonly int _horizontalTiles = 20;
         private readonly int _verticalTiles = 12;
-
-        public readonly int TileWidth = 64;
-        public readonly int TileHeight = 64;
-
+        public readonly int TileWidth;
+        public readonly int TileHeight;
         private readonly List<Tile> _tiles = new();
-
         private readonly TileFactory _tileFactory;
-
         public readonly List<ILevel> _levels = new();
         public ILevel ActiveLevel;
 
@@ -46,7 +41,7 @@ namespace Testproject.Map
 
         public void CreateLevelMap()
         {
-            // Clear existing tiles
+            // Clear existing tiles and objects
             _tiles.Clear();
 
             // Generate tile map
@@ -68,6 +63,7 @@ namespace Testproject.Map
 
         public void LoadMapParameters()
         {
+            // Additional setup for the level
         }
 
         public void RenderMap(SpriteBatch batch)
@@ -80,10 +76,21 @@ namespace Testproject.Map
             {
                 tile.Draw(batch);
             }
+
+            // Draw enemies or other level-specific objects
+            foreach (var enemy in ActiveLevel.Enemies)
+            {
+                enemy.Draw(batch); // Teken alle vijanden van het actieve niveau
+            }
         }
 
         public void Update(GameTime time)
         {
+            // Update level-specific objects
+            foreach (var enemy in ActiveLevel.Enemies)
+            {
+                enemy.Update(time); // Werk alle vijanden van het actieve niveau bij
+            }
         }
 
         public void GoToNextLevel()

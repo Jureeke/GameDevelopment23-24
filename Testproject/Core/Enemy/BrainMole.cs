@@ -17,28 +17,18 @@ namespace Testproject.Core.Enemy
         private List<Vector2> waypoints;
         private int currentWaypointIndex;
 
-        private float speed = 200f;
-        private float progress;
-        private float progressSpeed;
-
-        private Vector2 startPoint;
-        private Vector2 endPoint;
+        private float speed = 100f;
         public override Texture2D texture { get; set; }
 
         public BrainMole(GameManager game, Vector2 position, List<Vector2> waypoints)
         {
             this.game = game;
             this.position = position;
-            this.startPoint = position;
             this.waypoints = waypoints;
 
 
             texture = game.RootGame.Content.Load<Texture2D>("BrainMoleMonarchSpriteSheet");
             animationManager = new AnimationManager();
-
-            var idleAnimation = new Animation();
-            idleAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 7, 4, 4, 0);
-            animationManager.AddAnimation("Idle", idleAnimation);
 
             var moveAnimation = new Animation();
             moveAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 7, 4, 4, 2);

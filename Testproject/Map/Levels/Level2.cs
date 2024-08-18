@@ -72,7 +72,6 @@ namespace Testproject.Map.Levels
             Background = _game.RootGame.Content.Load<Texture2D>("background2");
             Enemies = new List<Enemy>
             {
-                new ShardsoulSlayer(game, new Vector2(350, 250)),
                 new BrainMole(game, new Vector2(80,80), waypoints)
             };
 

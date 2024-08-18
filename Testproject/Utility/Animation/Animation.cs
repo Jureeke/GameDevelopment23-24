@@ -53,21 +53,24 @@ namespace Testproject
             CurrentFrame = frames[counter];
         }
 
-        public void GetFramesFromTextureProperties(int widthSpriteSheet, int heightSpriteSheet, int numberOfWidthSprites, int numberOfHeightSprites, int length, int height)
+        public void GetFramesFromTextureProperties(int widthSpriteSheet, int heightSpriteSheet, int numberOfWidthSprites, int numberOfHeightSprites, int length, int startRow)
         {
             int widthOfFrame = widthSpriteSheet / numberOfWidthSprites;
             int heightOfFrame = heightSpriteSheet / numberOfHeightSprites;
 
-            int useHeight = heightOfFrame * height; // Calculate starting height
+            if (startRow >= numberOfHeightSprites)
+            {
+                throw new ArgumentException("Start row is out of bounds.");
+            }
+
+            int startY = startRow * heightOfFrame;
 
             for (int i = 0; i < length; i++)
             {
-                for (int x = 0; x < widthSpriteSheet; x += widthOfFrame)
-                {
-                    frames.Add(new AnimationFrame(new Rectangle(x, useHeight, widthOfFrame, heightOfFrame)));
-                }
+                int x = i * widthOfFrame;
+                frames.Add(new AnimationFrame(new Rectangle(x, startY, widthOfFrame, heightOfFrame)));
             }
- 
+
             // Set the CurrentFrame to the first frame if frames were added
             if (frames.Count > 0)
             {

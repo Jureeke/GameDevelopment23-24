@@ -37,7 +37,7 @@ namespace Testproject.Core.Enemy
             animationManager = new AnimationManager();
 
             var idleAnimation = new Animation();
-            idleAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 7, 4, 8, 0);
+            idleAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 7, 4, 4, 0);
             animationManager.AddAnimation("Idle", idleAnimation);
 
             var moveAnimation = new Animation();

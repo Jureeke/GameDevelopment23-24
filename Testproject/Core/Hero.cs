@@ -11,7 +11,7 @@ namespace GameDevProject.Core
     public class Hero : IGameObject, IMovable
     {
         public Texture2D texture;
-        private HeroAnimationManager animationManager;
+        private AnimationManager animationManager;
 
         public Vector2 spawnPosition = new Vector2(0, 0);
         private GameManager Game;
@@ -32,10 +32,23 @@ namespace GameDevProject.Core
             Game = manager;
             texture = Game.RootGame.Content.Load<Texture2D>("Gladiator-SpriteSheet");
             movementManager = new MovementManager();
-            animationManager = new HeroAnimationManager(texture);
+            animationManager = new AnimationManager();
 
-            // Setup animaties
-            SetupAnimations();
+            // Voeg animaties toe
+            var idleAnimation = new Animation();
+            idleAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 2, 0);
+            animationManager.AddAnimation("Idle", idleAnimation);
+
+            var walkAnimation = new Animation();
+            walkAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
+            animationManager.AddAnimation("Walk", walkAnimation);
+
+            var attackAnimation = new Animation();
+            attackAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 2);
+            animationManager.AddAnimation("Attack", attackAnimation);
+
+            // Stel standaard animatie in
+            animationManager.SetAnimation("Idle");
 
             // Calculate the spawn position to be in the bottom-left corner
             spawnPosition = new Vector2(0, Game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - 192 - 27 - 192);
@@ -73,12 +86,6 @@ namespace GameDevProject.Core
             groundLevel = Position.Y;
         }
 
-        private void SetupAnimations()
-        {
-            animationManager.SetAnimation("Idle");
-            animationManager.Update(new GameTime(), Speed); // Force update to avoid initial flickering
-        }
-
         private void UpdateAnimation(GameTime gameTime, Vector2 direction)
         {
             bool isMoving = direction.X != 0;
@@ -97,7 +104,7 @@ namespace GameDevProject.Core
                 animationManager.SetAnimation("Idle");
             }
 
-            animationManager.Update(gameTime, Speed);
+            animationManager.Update(gameTime);
         }
 
         private void Move()

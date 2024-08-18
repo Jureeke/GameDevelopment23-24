@@ -15,7 +15,7 @@ namespace Testproject.Core.Enemy
     {
 
         private GameManager game;
-        private HeroAnimationManager animationManager;
+        private AnimationManager animationManager;
         public override Texture2D texture { get; set; }
 
         public ShardsoulSlayer(GameManager game, Vector2 position)
@@ -23,7 +23,12 @@ namespace Testproject.Core.Enemy
             this.game = game;
             this.position = position;
             texture = game.RootGame.Content.Load<Texture2D>("ShardsoulSlayerSpriteSheet");
-            animationManager = new HeroAnimationManager(texture);
+            animationManager = new AnimationManager();
+
+            var idleAnimation = new Animation();
+            idleAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 0);
+            animationManager.AddAnimation("Idle", idleAnimation);
+
             animationManager.SetAnimation("Idle");
 
         }
@@ -34,7 +39,7 @@ namespace Testproject.Core.Enemy
 
         public override void Update(GameTime gameTime)
         {
-            animationManager.Update(gameTime, new Vector2(0,0));
+            animationManager.Update(gameTime);
         }
     }
 }

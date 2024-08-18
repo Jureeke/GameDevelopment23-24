@@ -8,36 +8,26 @@ using System.Threading.Tasks;
 
 namespace Testproject.Utility
 {
-    public class HeroAnimationManager
+    public class AnimationManager
     {
         private Animation currentAnimation;
         private Dictionary<string, Animation> animations;
 
-        public HeroAnimationManager(Texture2D texture)
+        public AnimationManager()
         {
             animations = new Dictionary<string, Animation>();
-
-            // Initialiseer animaties
-            var idleAnimation = new Animation();
-            idleAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 2, 0);
-            animations["Idle"] = idleAnimation;
-
-            var walkAnimation = new Animation();
-            walkAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
-            animations["Walk"] = walkAnimation;
-
-            var attackAnimation = new Animation();
-            attackAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 2);
-            animations["Attack"] = attackAnimation;
-
-            var deathAnimation = new Animation();
-            deathAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 4);
-            animations["Death"] = deathAnimation;
-
-            // Standard Animation
-            currentAnimation = animations["Idle"];
         }
 
+        // Voeg een animatie toe aan de manager
+        public void AddAnimation(string name, Animation animation)
+        {
+            if (!animations.ContainsKey(name))
+            {
+                animations[name] = animation;
+            }
+        }
+
+        // Zet de huidige animatie
         public void SetAnimation(string animationName)
         {
             if (animations.ContainsKey(animationName))
@@ -46,7 +36,8 @@ namespace Testproject.Utility
             }
         }
 
-        public void Update(GameTime gameTime, Vector2 speed)
+        // Werk de huidige animatie bij
+        public void Update(GameTime gameTime)
         {
             if (currentAnimation != null)
             {
@@ -54,6 +45,7 @@ namespace Testproject.Utility
             }
         }
 
+        // Teken de huidige animatie
         public void Draw(SpriteBatch spriteBatch, Texture2D texture, Vector2 position, Vector2 direction)
         {
             if (currentAnimation != null)

@@ -172,3 +172,4 @@ C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\obj\Debug
 C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\obj\Debug\net6.0-windows\ref\Testproject.dll
 C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\background1.xnb
 C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\background2.xnb
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\StartscreenBackground.xnb

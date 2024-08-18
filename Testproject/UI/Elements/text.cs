@@ -70,5 +70,4 @@ namespace Testproject.UI.Elements
             spriteBatch.DrawString(_font, _text, _location, _color, 0, textMiddlePoint, _scale, SpriteEffects.None, _layerDepth);
         }
     }
-
 }

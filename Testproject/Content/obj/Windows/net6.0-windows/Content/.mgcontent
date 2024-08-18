@@ -12,10 +12,12 @@
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/Gladiator-SpriteSheet.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/origbig.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/ShardsoulSlayerSpriteSheet.png</File>
+    <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/StartscreenBackground.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/Tiles_4x.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/TilesX4.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -61,7 +61,7 @@ namespace Testproject.Map.Levels
             Enemies = new List<Enemy>
             {
                 new ShardsoulSlayer(game, new Vector2(20, 155)),
-                new Ghoul(game, new Vector2(150, 20))
+                new Ghoul(game, new Vector2(900, 35),new Vector2(1200, 35), true)
             };
         }
 

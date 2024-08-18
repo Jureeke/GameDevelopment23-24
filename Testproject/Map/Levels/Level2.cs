@@ -58,6 +58,14 @@ namespace Testproject.Map.Levels
         public Texture2D Background { get; set; }
         public List<Enemy> Enemies { get; set; }
 
+        public List<Vector2> waypoints = new List<Vector2>
+        {
+            new Vector2(80, 80),
+            new Vector2(750, 450),
+            new Vector2(1500, 80),
+            new Vector2(750, 20),
+        };
+
         public Level2(GameManager game)
         {
             _game = game;
@@ -65,6 +73,7 @@ namespace Testproject.Map.Levels
             Enemies = new List<Enemy>
             {
                 new ShardsoulSlayer(game, new Vector2(350, 250)),
+                new BrainMole(game, new Vector2(80,80), waypoints)
             };
 
         }

@@ -4,8 +4,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Testproject;
-using Testproject.Core;
-using Testproject.Utility;
 using Testproject.Utility.Collision;
 
 namespace GameDevProject.Core
@@ -22,7 +20,6 @@ namespace GameDevProject.Core
 
         private readonly int hitBoxWidth = 70;
         private readonly int hitBoxHeight = 112;
-
 
         public int Lives { get; set; }
         public Vector2 Position { get; set; }
@@ -52,7 +49,6 @@ namespace GameDevProject.Core
         private float jumpStrength;
         private float groundLevel;
 
-
         public Hero(GameManager manager)
         {
             _game = manager;
@@ -62,7 +58,7 @@ namespace GameDevProject.Core
             Lives = 3;
 
             #region animations
-            // Voeg animaties toe
+            // Add animations
             var idleAnimation = new Animation();
             idleAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 2, 0);
             animationManager.AddAnimation("Idle", idleAnimation);
@@ -75,7 +71,7 @@ namespace GameDevProject.Core
             attackAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 2);
             animationManager.AddAnimation("Attack", attackAnimation);
 
-            // Stel standaard animatie in
+            // Set default animation
             animationManager.SetAnimation("Idle");
             #endregion
 
@@ -93,6 +89,7 @@ namespace GameDevProject.Core
             isJumping = false;
             jumpStrength = 700f;
             groundLevel = Position.Y;
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -133,7 +130,6 @@ namespace GameDevProject.Core
             {
                 animationManager.SetAnimation("Walk");
             }
-
             else
             {
                 animationManager.SetAnimation("Idle");
@@ -171,7 +167,7 @@ namespace GameDevProject.Core
                 isJumping = false;
             }
         }
-        
+
         public void LateSetup()
         {
             _collisionManager = _game.heroCollisionManager;

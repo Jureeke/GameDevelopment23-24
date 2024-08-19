@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using System.Diagnostics;
 using System.Linq;
 using Testproject.Map;
 using Testproject.Map.Tiles;

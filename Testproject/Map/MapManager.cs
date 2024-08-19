@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
-using System.Diagnostics;
 using Testproject.Core.Enemy;
 using Testproject.Map.Levels;
 using Testproject.Map.Tiles;
@@ -18,7 +17,6 @@ namespace Testproject.Map
 
         private readonly List<Coin> _coins = new();
         private readonly List<TileBase> _tiles = new();
-        private readonly List<TileBase> _spikes = new();
 
         public List<IEnemy> _enemies = new();
 
@@ -50,7 +48,6 @@ namespace Testproject.Map
             // Clear existing tiles and objects
             _tiles.Clear();
             _coins.Clear();
-            _spikes.Clear(); // Clear spikes as well
 
             // Generate tile map
             for (int y = 0; y < _verticalTiles; y++)
@@ -68,12 +65,6 @@ namespace Testproject.Map
                             // Instantiate and add the coin to the list
                             Coin coin = new Coin(xOffset, yOffset, _game);
                             _coins.Add(coin);
-                        }
-                        else if (tile.Value == TileMap.Tiles.SPIKE_3)
-                        {
-                            // Instantiate and add the spike to the list as TileBase
-                            TileBase spike = _tileFactory.CreateTile(tile.Value, xOffset, yOffset); // Assuming TileBase can represent spikes
-                            _spikes.Add(spike);
                         }
                         else
                         {
@@ -103,14 +94,11 @@ namespace Testproject.Map
             foreach (var enemy in ActiveLevel.Enemies)
             {
                 enemy.Draw(batch); // Teken alle vijanden van het actieve niveau
-                foreach (var coin in _coins)
-                {
-                    coin.Draw(batch);
-                }
             }
-            foreach (var spike in _spikes)
+
+            foreach (var coin in _coins)
             {
-                spike.Draw(batch);
+                coin.Draw(batch);
             }
         }
 
@@ -120,10 +108,11 @@ namespace Testproject.Map
             foreach (var enemy in ActiveLevel.Enemies)
             {
                 enemy.Update(time); // Werk alle vijanden van het actieve niveau bij
-                foreach (var coin in _coins)
-                {
-                    coin.Update(time);
-                }
+
+            }
+            foreach (var coin in _coins)
+            {
+                coin.Update(time);
             }
         }
 
@@ -134,23 +123,20 @@ namespace Testproject.Map
         }
         public List<TileBase> FindAllCollissionsWithMap(Rectangle hitbox)
         {
-            return _tiles.FindAll(tile => tile.HitBox.Intersects(hitbox));
+            // Find all tiles that intersect with the given hitbox
+            List<TileBase> collidedTiles = _tiles.FindAll(tile => tile.HitBox.Intersects(hitbox));
+
+            return collidedTiles;
         }
-        public List<TileBase> FindAllCollissionsWithSpikes(Rectangle hitbox)
+
+        public List<IEnemy> FindAllCollissionsWithEnemy(Rectangle hitbox, List<IEnemy> enemies)
         {
-            _spikes.FindAll(tile => tile.type == TileMap.Tiles.SPIKE_3 && tile.HitBox.Intersects(hitbox));
-            Debug.WriteLine(_spikes.Count);
-            return _spikes;
-        }
-        public List<IEnemy> FindAllCollissionsWithEnemy(Rectangle hitbox)
-        {
-            return _enemies.FindAll(enemy => enemy.HitBox.Intersects(hitbox));
+            return enemies.FindAll(enemy => enemy.HitBox.Intersects(hitbox));
         }
         public List<Coin> FindAllCollissionsWithCoins(Rectangle hitbox)
         {
             return _coins.FindAll(coin => coin.HitBox.Intersects(hitbox));
         }
-
 
         public void GoToNextLevel()
         {

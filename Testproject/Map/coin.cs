@@ -1,7 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Diagnostics;
-using Testproject.Core.Enemy;
 using Testproject.Utility.Collision;
 
 namespace Testproject.Map.Tiles
@@ -17,18 +15,8 @@ namespace Testproject.Map.Tiles
         private Animation _animation;
         private bool _isPickedUp;
 
-        // Backing field for the hitbox
-        private Rectangle _hitBox;
-
-        private Texture2D _hitboxTexture;
-
-
-        // Implement the HitBox property
-        public Rectangle HitBox
-        {
-            get => _hitBox;
-            set => _hitBox = value;
-        }
+        // Hitbox for collision detection
+        public Rectangle HitBox { get; set; }
 
         public Coin(int x, int y, GameManager game)
         {
@@ -36,14 +24,15 @@ namespace Testproject.Map.Tiles
             _y = y;
             _game = game;
 
+            // Load texture and setup animation
             _texture = game.RootGame.Content.Load<Texture2D>("coin1_64");
             _animation = new Animation();
-
-            // Assuming a 64x64 sprite sheet with 8 frames in a single row
             _animation.GetFramesFromTextureProperties(_texture.Width, _texture.Height, 15, 1, 15, 0);
 
-            _isPickedUp = false;
+            // Initialize hitbox
+            HitBox = new Rectangle(_x, _y, _width, _height);
 
+            _isPickedUp = false;
         }
 
         // Update the animation state of the coin
@@ -52,8 +41,8 @@ namespace Testproject.Map.Tiles
             if (!_isPickedUp)
             {
                 _animation.Update(gameTime);
-                // Update the hitbox position based on the coin's position
-                _hitBox = new Rectangle(_x, _y, _width, _height);
+                // Update hitbox in case the coin moves (not necessary if the coin is stationary)
+                HitBox = new Rectangle(_x, _y, _width, _height);
             }
         }
 
@@ -63,7 +52,7 @@ namespace Testproject.Map.Tiles
             if (!_isPickedUp)
             {
                 var currentFrame = _animation.CurrentFrame;
-                spriteBatch.Draw(_texture, _hitBox, currentFrame.SourceRectangle, Color.White);
+                spriteBatch.Draw(_texture, HitBox, currentFrame.SourceRectangle, Color.White);
             }
         }
 
@@ -73,15 +62,15 @@ namespace Testproject.Map.Tiles
             if (!_isPickedUp)
             {
                 _isPickedUp = true;
-                //implement score updates
-                _game.score++;
-                OnPickedUp();
+                _game.score++;  // Update the game score
+                OnPickedUp();   // Trigger any additional logic on pickup
             }
         }
 
-        // Logic to be executed when the coin is picked up
+        // Additional logic to be executed when the coin is picked up
         private void OnPickedUp()
         {
+            // Optional: Add sound effects, particles, etc.
         }
     }
 }

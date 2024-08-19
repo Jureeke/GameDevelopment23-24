@@ -1,12 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using SharpDX.Direct3D9;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Testproject.Utility;
 
 namespace Testproject.Core.Enemy
 {
@@ -18,7 +12,7 @@ namespace Testproject.Core.Enemy
         private List<Vector2> waypoints;
         private int currentWaypointIndex;
 
-        private float speed = 100f;
+        private float speed = 200f;
 
         private int width = 128;  // Width of the hitbox
         private int height = 128; // Height of the hitbox

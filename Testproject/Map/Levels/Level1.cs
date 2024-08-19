@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
 using Testproject.Core.Enemy;
 
@@ -52,6 +51,7 @@ namespace Testproject.Map.Levels
 
         public Texture2D Background { get; set; }
         public List<IEnemy> Enemies { get; set; }
+
         public Vector2 spawnpoint { get; set; }
 
         public Level1(GameManager game)
@@ -65,8 +65,8 @@ namespace Testproject.Map.Levels
             
             Enemies = new List<IEnemy>
             {
-                new ShardsoulSlayer(game, new Vector2(20, 157)),
-                new Ghoul(game, new Vector2(900, 120),new Vector2(1200, 120), true),
+                new ShardsoulSlayer(game, new Vector2(20, 167)),
+                new Ghoul(game, new Vector2(900, 130),new Vector2(1200, 130), true),
             };
 
             foreach (var enemy in Enemies)
@@ -81,25 +81,16 @@ namespace Testproject.Map.Levels
             {
                 item.Update(gameTime);
             }
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-                foreach (var item in Enemies)
+                foreach (var enemy in Enemies)
                 {
-                    item.Draw(spriteBatch);
+                    enemy.Draw(spriteBatch);
                 }
-                Background = _game.RootGame.Content.Load<Texture2D>("origbig");
-                _coinTexture = _game.RootGame.Content.Load<Texture2D>("coin1_64");
-
-                _coinAnimation = new Animation();
-                _coinAnimation.GetFramesFromTextureProperties(
-                    _coinTexture.Width,
-                    _coinTexture.Height,
-                    16,
-                    1,
-                    8,
-                    0);
+            Background = _game.RootGame.Content.Load<Texture2D>("origbig");
         }
     }
 }

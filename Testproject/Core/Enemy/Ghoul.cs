@@ -1,13 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using SharpDX.Direct3D;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Testproject.Utility;
 
 namespace Testproject.Core.Enemy
 {
@@ -27,8 +19,6 @@ namespace Testproject.Core.Enemy
         public Vector2 position { get; set; }
         public Vector2 direction { get; set; }
 
-        private Texture2D hitboxTexture;  // Texture for drawing the hitbox
-
         public Ghoul(GameManager game, Vector2 position, Vector2 endPosition, bool enableWalking)
         {
             this.game = game;
@@ -38,12 +28,11 @@ namespace Testproject.Core.Enemy
             this.enableWalking = enableWalking;
 
             texture = game.RootGame.Content.Load<Texture2D>("GhoulSpriteSheet");
-            animationManager = new AnimationManager();
 
+            animationManager = new AnimationManager();
             var walkAnimation = new Animation();
             walkAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
             animationManager.AddAnimation("Walk", walkAnimation);
-
             animationManager.SetAnimation("Walk");
 
             direction = this.endPosistion - startPosistion;
@@ -51,7 +40,6 @@ namespace Testproject.Core.Enemy
             {
                 direction.Normalize();
             }
-
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -99,15 +87,15 @@ namespace Testproject.Core.Enemy
             {
                 return new Rectangle(
                     (int)position.X,
-                    (int)position.Y + 32,
+                    (int)position.Y + 32, // Adjust as needed
                     144,
                     112
                 );
             }
             set
             {
+                // Set logic if needed
             }
         }
-
     }
 }

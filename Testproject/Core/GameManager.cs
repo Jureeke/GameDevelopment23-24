@@ -1,14 +1,10 @@
 ﻿using GameDevProject.Core;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Testproject;
 using Testproject.Audio;
-using Testproject.Core;
-using Testproject.Core.Enemy;
 using Testproject.Core.GameStates;
 using Testproject.Map;
-using Testproject.Map.Levels;
 using Testproject.Utility.StateMachine;
 
 public class GameManager : StateMachine, IGameObject

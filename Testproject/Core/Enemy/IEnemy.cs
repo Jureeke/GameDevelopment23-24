@@ -12,6 +12,6 @@ namespace Testproject.Core.Enemy
         public Texture2D texture { get; set; }
         public Vector2 position { get; set; }
         public Vector2 direction { get; set; }
-        public Rectangle HitBox { get; set; }
+        public new Rectangle HitBox { get; set; }
     }
 }

@@ -1,13 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using SharpDX.Direct3D9;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Testproject.Core.GameStates;
-using Testproject.Utility;
 
 namespace Testproject.Core.Enemy
 {
@@ -20,7 +12,6 @@ namespace Testproject.Core.Enemy
         public Vector2 position { get; set; }
         public Vector2 direction { get; set; }
 
-        private Texture2D hitboxTexture;  // Texture for drawing the hitbox
 
         private double animationTimer;
         private double animationInterval = 3.0;
@@ -46,10 +37,6 @@ namespace Testproject.Core.Enemy
             currentAnimation = "Idle";
             animationManager.SetAnimation(currentAnimation);
 
-            // Create a 1x1 white texture to use for the hitbox
-            hitboxTexture = new Texture2D(game.RootGame.GraphicsDevice, 1, 1);
-            hitboxTexture.SetData(new[] { Color.White });
-
             // Initialize the animation timer
             animationTimer = 0.0;
         }
@@ -58,6 +45,7 @@ namespace Testproject.Core.Enemy
         {
             // Draw the ShardsoulSlayer's animation
             animationManager.Draw(spriteBatch, texture, position, direction);
+
         }
 
         public void Update(GameTime gameTime)

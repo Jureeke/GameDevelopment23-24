@@ -1,7 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Diagnostics;
 using Testproject.Utility.Collision;
 
 namespace Testproject.Map.Tiles
@@ -19,6 +17,7 @@ namespace Testproject.Map.Tiles
         public Rectangle HitBox { get; set; }
         private static Texture2D _hitboxTexture;
         public TileMap.Tiles type;
+
         public TileBase(TileMap.Tiles type, int x, int y, int width, int height, Texture2D texture, Rectangle offsetRectangle, bool transparent = false)
         {
             _x = x;
@@ -29,23 +28,24 @@ namespace Testproject.Map.Tiles
             _offsetRectangle = offsetRectangle;
             IsTransparent = transparent;
 
+            this.type = type; // Set the tile type
+
             if (type == TileMap.Tiles.SPIKE_3)
             {
-                HitBox = new Rectangle(_x, _y +_h/2, _w, _h/2);
+                HitBox = new Rectangle(_x, _y + _h / 2, _w, _h / 2);
             }
-            else if(!transparent)
+            else if (!transparent)
             {
                 HitBox = new Rectangle(_x, _y, _w, _h);
             }
-
         }
+
+
         public void Draw(SpriteBatch spriteBatch)
         {
             // Draw the tile
             spriteBatch.Draw(_texture, new Rectangle(_x, _y, _w, _h), _offsetRectangle, Color.White);
 
         }
-
-      
     }
 }

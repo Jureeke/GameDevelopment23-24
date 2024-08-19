@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Testproject.Core.Enemy;
+using Testproject.Map.Tiles;
 
 namespace Testproject.Map.Levels
 {
@@ -40,7 +41,7 @@ namespace Testproject.Map.Levels
             {null,null,null,null,null,null,null,Grass,null,PLS,null,Grass,null,null,null,null,null,null,null,null },
             {null,null,null,null,null,null,null,PLS,null,null,null,PLS,null,null,null,null,null,null,null,null },
             {null,null,Grass,Coin,null,null,null,null,null,null,null,null,null,null,null,Coin,null,null,null,null },
-            {null,null,PLL,PLM,PLR,null,null,null,null,null,null,null,null,null,PLL,PLM,PLR,null,null,null },
+            {null,null,PLL,PLM,PLR,null,null,null,null,null,null,null,null,PLL,PLM,PLM,PLR,null,null,null },
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,PLS,null,null },
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
             {null,Grass,null,null,null,null,Grass,null,null,null,null,null,Coin,null,null,null,null,null,Grass,null },
@@ -51,7 +52,12 @@ namespace Testproject.Map.Levels
 
         public Texture2D Background { get; set; }
         public List<IEnemy> Enemies { get; set; }
+        private List<Coin> _coins;
+
         public Vector2 spawnpoint { get; set; }
+
+        public Animation _coinAnimation;
+        public Texture2D _coinTexture;
 
         public List<Vector2> waypoints = new List<Vector2>
         {
@@ -64,15 +70,13 @@ namespace Testproject.Map.Levels
         public Level2(GameManager game)
         {
             _game = game;
-            _game.hero.ResetPosition(new Vector2(0, 750));
             Background = _game.RootGame.Content.Load<Texture2D>("background2");
             spawnpoint = new Vector2(0,770);
-            _game.hero.ResetPosition(spawnpoint);
 
             Enemies = new List<IEnemy>
             {
                 new BrainMole(game, new Vector2(80,80), waypoints),
-                new Ghoul(game, new Vector2(1200, 320),new Vector2(1400, 320), true),
+                new Ghoul(game, new Vector2(1200, 310),new Vector2(1500, 310), true),
             };
 
             foreach (var enemy in Enemies)
@@ -90,9 +94,9 @@ namespace Testproject.Map.Levels
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (var item in Enemies)
+            foreach (var enemy in Enemies)
             {
-                item.Draw(spriteBatch);
+                enemy.Draw(spriteBatch);
             }
         }
     }

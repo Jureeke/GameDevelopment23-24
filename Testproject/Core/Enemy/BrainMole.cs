@@ -34,7 +34,7 @@ namespace Testproject.Core.Enemy
             moveAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 7, 4, 4, 2);
             animationManager.AddAnimation("Move", moveAnimation);
 
-            animationManager.SetAnimation("Idle");
+            animationManager.SetAnimation("Move");
         }
 
         public override void Draw(SpriteBatch spriteBatch)

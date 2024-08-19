@@ -10,11 +10,13 @@ namespace Testproject.Map.Levels
     {
         private GameManager _game;
 
-        #region
+        public readonly Animation _coinAnimation;
+        public readonly Texture2D _coinTexture;
+
+        #region Tile Definitions
         private const TileMap.Tiles Coin = TileMap.Tiles.COIN_BASE;
         private const TileMap.Tiles Grass = TileMap.Tiles.GRASS;
         private const TileMap.Tiles Spikes = TileMap.Tiles.SPIKE_3;
-
 
         private const TileMap.Tiles BL = TileMap.Tiles.BOTTOM_LEFT;
         private const TileMap.Tiles BM = TileMap.Tiles.BOTTOM_MIDDLE;
@@ -44,8 +46,8 @@ namespace Testproject.Map.Levels
             {null,null,null,null,null,null,null,null,TL,TM,SR,null,null,null,TL,TM,SR,null,null,null },
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
             {null,Grass,null,null,null,null,null,Coin,null,null,null,null,Coin,null,null,null,null,null,Grass,null },
-            {TL,TM,TM,TR,null,null,TL,TM,TR,null,null,TL,TM,TR,null,null,TL,TM,TM,TR },
-            {ML,M,M,MR,Spikes,Spikes,ML,M,MR,Spikes,Spikes,ML,M,MR,Spikes,Spikes,ML,M,M,MR },
+            {TL,TM,TM,TR,null,TL,TM,TM,TR,null,TL,TM,TM,TR,null,null,TL,TM,TM,TR },
+            {ML,M,M,MR,Spikes,ML,M,M,MR,Spikes,ML,M,M,MR,Spikes,Spikes,ML,M,M,MR },
             {BL,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BR },
         };
 
@@ -55,6 +57,7 @@ namespace Testproject.Map.Levels
         public Level1(GameManager game)
         {
             _game = game;
+
             _game.hero.ResetPosition(); // Reset the hero's position to the spawn point
 
             Background = _game.RootGame.Content.Load<Texture2D>("background1");
@@ -79,6 +82,19 @@ namespace Testproject.Map.Levels
             {
                 item.Draw(spriteBatch);
             }
+            Background = _game.RootGame.Content.Load<Texture2D>("origbig");
+            _coinTexture = _game.RootGame.Content.Load<Texture2D>("coin1_64");
+
+            _coinAnimation = new Animation();
+            _coinAnimation.GetFramesFromTextureProperties(
+                _coinTexture.Width,
+                _coinTexture.Height,
+                16,
+                1,
+                8,
+                0);
         }
+
+
     }
 }

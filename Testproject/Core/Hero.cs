@@ -51,7 +51,8 @@ namespace GameDevProject.Core
             animationManager.SetAnimation("Idle");
 
             // Calculate the spawn position to be in the bottom-left corner
-            spawnPosition = new Vector2(0, Game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - 192 - 27 - 192);
+            spawnPosition = new Vector2(0, Game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - (64*6) - 27 );
+
 
             // Set the hero's initial position to the calculated spawn position
             Position = spawnPosition;
@@ -62,7 +63,7 @@ namespace GameDevProject.Core
 
             gravity = 1000f;
             isJumping = false;
-            jumpStrength = 450f;
+            jumpStrength = 700f; // if changed to half can jump 2 blocks
             groundLevel = Position.Y;
         }
 

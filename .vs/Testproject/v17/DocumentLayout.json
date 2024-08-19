@@ -3,44 +3,60 @@
   "WorkspaceRootPath": "C:\\23-24\\Game Development\\GameDevelopment23-24\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\tilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\tilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\utility\\animation\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\utility\\animation\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\levels\\level2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\levels\\level2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\levels\\level2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\levels\\level2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\utility\\animation\\coinanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\utility\\animation\\coinanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\utility\\animation\\animationframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\utility\\animation\\animationframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\utility\\animation\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\utility\\animation\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\mapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\mapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\tilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\tilemap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\levels\\ilevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\levels\\ilevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\tiles\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\tiles\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\map\\tiles\\tilefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\map\\tiles\\tilefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\core\\gamestates\\mainmenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\core\\gamestates\\mainmenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|c:\\23-24\\game development\\gamedevelopment23-24\\testproject\\utility\\animation\\animationframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E3EC053-1B38-4344-8810-4B19F8573DC7}|Testproject\\Testproject.csproj|solutionrelative:testproject\\utility\\animation\\animationframe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,107 +78,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TileMap.cs",
-              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\TileMap.cs",
-              "RelativeDocumentMoniker": "Testproject\\Map\\TileMap.cs",
-              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\TileMap.cs",
-              "RelativeToolTip": "Testproject\\Map\\TileMap.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T20:53:34.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AnimationFrame.cs",
-              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\AnimationFrame.cs",
-              "RelativeDocumentMoniker": "Testproject\\Utility\\Animation\\AnimationFrame.cs",
-              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\AnimationFrame.cs",
-              "RelativeToolTip": "Testproject\\Utility\\Animation\\AnimationFrame.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T20:35:56.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Animation.cs",
-              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\Animation.cs",
-              "RelativeDocumentMoniker": "Testproject\\Utility\\Animation\\Animation.cs",
-              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\Animation.cs",
-              "RelativeToolTip": "Testproject\\Utility\\Animation\\Animation.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAkwCkAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T20:35:55.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "MainMenuState.cs",
-              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameStates\\MainMenuState.cs",
-              "RelativeDocumentMoniker": "Testproject\\Core\\GameStates\\MainMenuState.cs",
-              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameStates\\MainMenuState.cs",
-              "RelativeToolTip": "Testproject\\Core\\GameStates\\MainMenuState.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T20:33:28.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Level2.cs",
-              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\Level2.cs",
-              "RelativeDocumentMoniker": "Testproject\\Map\\Levels\\Level2.cs",
-              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\Level2.cs",
-              "RelativeToolTip": "Testproject\\Map\\Levels\\Level2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T19:52:03.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Level1.cs",
-              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\Level1.cs",
-              "RelativeDocumentMoniker": "Testproject\\Map\\Levels\\Level1.cs",
-              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\Level1.cs",
-              "RelativeToolTip": "Testproject\\Map\\Levels\\Level1.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAQwDUAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:23:34.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Hero.cs",
               "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\Hero.cs",
               "RelativeDocumentMoniker": "Testproject\\Core\\Hero.cs",
               "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\Hero.cs",
               "RelativeToolTip": "Testproject\\Core\\Hero.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowC4AAAA7AAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAA5wCAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T15:03:35.225Z",
+              "WhenOpened": "2024-08-17T13:29:56.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "coin.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\coin.cs",
+              "RelativeDocumentMoniker": "Testproject\\Map\\coin.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\coin.cs",
+              "RelativeToolTip": "Testproject\\Map\\coin.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T13:14:37.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameManager.cs",
-              "RelativeDocumentMoniker": "Testproject\\Core\\GameManager.cs",
-              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameManager.cs",
-              "RelativeToolTip": "Testproject\\Core\\GameManager.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwBkAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "AnimationFrame.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\AnimationFrame.cs",
+              "RelativeDocumentMoniker": "Testproject\\Utility\\Animation\\AnimationFrame.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\AnimationFrame.cs",
+              "RelativeToolTip": "Testproject\\Utility\\Animation\\AnimationFrame.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T11:29:41.596Z",
+              "WhenOpened": "2024-08-17T13:12:42.961Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Tile.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\tiles\\Tile.cs",
+              "RelativeDocumentMoniker": "Testproject\\Map\\tiles\\Tile.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\tiles\\Tile.cs",
+              "RelativeToolTip": "Testproject\\Map\\tiles\\Tile.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T13:09:09.686Z"
             },
             {
               "$type": "Document",
@@ -172,14 +134,115 @@
               "RelativeDocumentMoniker": "Testproject\\Map\\MapManager.cs",
               "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\MapManager.cs",
               "RelativeToolTip": "Testproject\\Map\\MapManager.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwBgAAAAsAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAAHEAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T20:53:38.181Z",
+              "WhenOpened": "2024-08-17T12:59:50.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Level1.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\Level1.cs",
+              "RelativeDocumentMoniker": "Testproject\\Map\\Levels\\Level1.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\Level1.cs",
+              "RelativeToolTip": "Testproject\\Map\\Levels\\Level1.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAwC0AAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T15:23:34.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Animation.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\Animation.cs",
+              "RelativeDocumentMoniker": "Testproject\\Utility\\Animation\\Animation.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\Animation.cs",
+              "RelativeToolTip": "Testproject\\Utility\\Animation\\Animation.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T20:35:55.912Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "TileMap.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\TileMap.cs",
+              "RelativeDocumentMoniker": "Testproject\\Map\\TileMap.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\TileMap.cs",
+              "RelativeToolTip": "Testproject\\Map\\TileMap.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T20:53:34.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Level2.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\Level2.cs",
+              "RelativeDocumentMoniker": "Testproject\\Map\\Levels\\Level2.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\Level2.cs",
+              "RelativeToolTip": "Testproject\\Map\\Levels\\Level2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T19:52:03.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoinAnimation.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\CoinAnimation.cs",
+              "RelativeDocumentMoniker": "Testproject\\Utility\\Animation\\CoinAnimation.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Utility\\Animation\\CoinAnimation.cs",
+              "RelativeToolTip": "Testproject\\Utility\\Animation\\CoinAnimation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T13:33:38.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TileFactory.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\tiles\\TileFactory.cs",
+              "RelativeDocumentMoniker": "Testproject\\Map\\tiles\\TileFactory.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\tiles\\TileFactory.cs",
+              "RelativeToolTip": "Testproject\\Map\\tiles\\TileFactory.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T12:51:00.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ILevel.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\ILevel.cs",
+              "RelativeDocumentMoniker": "Testproject\\Map\\Levels\\ILevel.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Map\\Levels\\ILevel.cs",
+              "RelativeToolTip": "Testproject\\Map\\Levels\\ILevel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T13:16:15.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameManager.cs",
+              "RelativeDocumentMoniker": "Testproject\\Core\\GameManager.cs",
+              "ToolTip": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Core\\GameManager.cs",
+              "RelativeToolTip": "Testproject\\Core\\GameManager.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwFEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T11:29:41.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\23-24\\Game Development\\GameDevelopment23-24\\Testproject\\Game1.cs",
               "RelativeDocumentMoniker": "Testproject\\Game1.cs",
@@ -187,8 +250,7 @@
               "RelativeToolTip": "Testproject\\Game1.cs",
               "ViewState": "AQIAACYAAAAAAAAAAAA3wBsAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:37:36.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-16T11:37:36.111Z"
             }
           ]
         }

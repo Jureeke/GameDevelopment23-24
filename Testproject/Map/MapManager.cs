@@ -1,8 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using Testproject.Map.Levels;
 using Testproject.Map.Tiles;
 
@@ -13,8 +11,9 @@ namespace Testproject.Map
         private readonly GameManager _game;
         private readonly int _horizontalTiles = 20;
         private readonly int _verticalTiles = 12;
-        public readonly int TileWidth;
-        public readonly int TileHeight;
+        public readonly int TileWidth = 64;
+        public readonly int TileHeight = 64;
+        private readonly List<Coin> _coins = new();
         private readonly List<Tile> _tiles = new();
         private readonly TileFactory _tileFactory;
         public readonly List<ILevel> _levels = new();
@@ -43,6 +42,7 @@ namespace Testproject.Map
         {
             // Clear existing tiles and objects
             _tiles.Clear();
+            _coins.Clear();
 
             // Generate tile map
             for (int y = 0; y < _verticalTiles; y++)
@@ -55,7 +55,16 @@ namespace Testproject.Map
                     TileMap.Tiles? tile = ActiveLevel.GameMap[y, x];
                     if (tile.HasValue)
                     {
-                        _tiles.Add(_tileFactory.CreateTile(tile.Value, xOffset, yOffset));
+                        if (tile.Value == TileMap.Tiles.COIN_BASE)
+                        {
+                            // Instantiate and add the coin to the list
+                            Coin coin = new Coin(xOffset, yOffset, _game);
+                            _coins.Add(coin);
+                        }
+                        else
+                        {
+                            _tiles.Add(_tileFactory.CreateTile(tile.Value, xOffset, yOffset));
+                        }
                     }
                 }
             }
@@ -81,6 +90,10 @@ namespace Testproject.Map
             foreach (var enemy in ActiveLevel.Enemies)
             {
                 enemy.Draw(batch); // Teken alle vijanden van het actieve niveau
+            // Coins
+            foreach (var coin in _coins)
+            {
+                coin.Draw(batch);
             }
         }
 
@@ -90,12 +103,14 @@ namespace Testproject.Map
             foreach (var enemy in ActiveLevel.Enemies)
             {
                 enemy.Update(time); // Werk alle vijanden van het actieve niveau bij
+            foreach (var coin in _coins)
+            {
+                coin.Update(time);
             }
         }
 
         public void GoToNextLevel()
         {
-            Debug.Write(_levels.Count);
             ILevel nextLevel = _levels[1];
             ActiveLevel = nextLevel;
 
@@ -104,3 +119,4 @@ namespace Testproject.Map
         }
     }
 }
+    

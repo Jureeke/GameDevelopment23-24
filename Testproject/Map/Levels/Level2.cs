@@ -41,9 +41,9 @@ namespace Testproject.Map.Levels
             {null,null,null,null,null,null,null,Grass,null,PLS,null,Grass,null,null,null,null,null,null,null,null },
             {null,null,null,null,null,null,null,PLS,null,null,null,PLS,null,null,null,null,null,null,null,null },
             {null,null,Grass,Coin,null,null,null,null,null,null,null,null,null,null,null,Coin,null,null,null,null },
-            {null,null,PLL,PLM,PLR,null,null,null,null,null,null,null,null,PLL,PLM,PLM,PLR,null,null,null },
-            {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,PLS,null,null },
+            {null,null,PLL,PLM,PLR,null,null,null,null,null,null,null,PLL,PLM,PLM,PLM,PLR,null,null,null },
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
+            {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,PLS,null,null },
             {null,Grass,null,null,null,null,Grass,null,null,null,null,null,Coin,null,null,null,null,null,Grass,null },
             {TL,TM,TM,TM,TM,TM,TM,TR,null,null,null,TL,TM,TM,TM,TM,TM,TM,TM,TR  },
             {ML,MM,MM,MM,MM,MM,MM,MR,Spikes,Spikes,Spikes,ML,MM,MM,MM,MM,MM,MM,MM,MR },
@@ -73,10 +73,12 @@ namespace Testproject.Map.Levels
             Background = _game.RootGame.Content.Load<Texture2D>("background2");
             spawnpoint = new Vector2(0,770);
 
+            _game.hero.ResetPosition(spawnpoint);
+
             Enemies = new List<IEnemy>
             {
                 new BrainMole(game, new Vector2(80,80), waypoints),
-                new Ghoul(game, new Vector2(1200, 310),new Vector2(1500, 310), true),
+                new Ghoul(game, new Vector2(1100, 310),new Vector2(1400, 310), true),
             };
 
             foreach (var enemy in Enemies)

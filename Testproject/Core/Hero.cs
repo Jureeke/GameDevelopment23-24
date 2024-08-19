@@ -87,7 +87,7 @@ namespace GameDevProject.Core
 
             gravity = 1000f;
             isJumping = false;
-            jumpStrength = 700f;
+            jumpStrength = 600f;
             groundLevel = Position.Y;
 
         }

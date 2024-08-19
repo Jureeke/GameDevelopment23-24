@@ -36,14 +36,14 @@ namespace Testproject.Map.Levels
         public TileMap.Tiles?[,] GameMap { get; set; } =
         {
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
-            {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
-            {null,null,null,null,null,null,null,null,null,null,null,null,Coin,Grass,null,null,null,null,null,null },
+            {null,null,null,null,null,null,null,null,null,null,null,null,null,Coin,Grass,null,null,null,null,null },
             {null,null,null,null,null,null,null,null,PLL,PLM,PLM,PLM,PLM,PLM,PLR,null,null,null,null,null },
+            {null,null,null,null,null,null,PLS,null,null,null,null,null,null,null,null,null,null,null,null,null },
             {null,null,Grass,Coin,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
             {null,PLL,PLM,PLM,PLR,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
             {null,null,null,null,null,null,null,null,PLL,PLM,PLR,null,null,PLL,PLM,PLR,null,null,null,null },
-            {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,PLS,null,null },
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
+            {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,PLS,null,null },
             {null,Grass,null,null,null,null,null,Coin,null,null,null,null,Coin,null,null,null,null,Grass,null,null},
             {TL,TM,TM,TR,Spikes,Spikes,TL,TM,TR,Spikes,Spikes,TL,TM,TR,Spikes,Spikes,TL,TM,TM,TR },
             {BL,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BR },
@@ -65,8 +65,8 @@ namespace Testproject.Map.Levels
             
             Enemies = new List<IEnemy>
             {
-                new ShardsoulSlayer(game, new Vector2(20, 167)),
-                new Ghoul(game, new Vector2(900, 130),new Vector2(1200, 130), true),
+                new ShardsoulSlayer(game, new Vector2(20, 155)),
+                new Ghoul(game, new Vector2(800, 40),new Vector2(1200, 40), true),
             };
 
             foreach (var enemy in Enemies)

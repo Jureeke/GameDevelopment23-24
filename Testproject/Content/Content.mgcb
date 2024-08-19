@@ -69,6 +69,12 @@
 /processorParam:TextureFormat=Compressed
 /build:Font.spritefont
 
+#begin GameOver.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:GameOver.mp3
+
 #begin GhoulSpriteSheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -182,4 +188,28 @@
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:Victory.mp3
+
+#begin WinTrophy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:WinTrophy.png
+
+#begin YouDied.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:YouDied.png
 

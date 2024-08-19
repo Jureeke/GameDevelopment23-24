@@ -1,7 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Testproject.Utility.Animation;
-using Testproject.Utility.Animation.Testproject;
 
 namespace Testproject.Map.Tiles
 {
@@ -13,7 +11,7 @@ namespace Testproject.Map.Tiles
         private int _width = 64;
         private int _height = 64;
         private Texture2D _texture;
-        private CoinAnimation _animation;
+        private Animation _animation;
         private bool _isPickedUp;
 
         public Coin(int x, int y, GameManager game)
@@ -23,7 +21,7 @@ namespace Testproject.Map.Tiles
             _game = game;
 
             _texture = game.RootGame.Content.Load<Texture2D>("coin1_64");
-            _animation = new CoinAnimation();
+            _animation = new Animation();
 
             // Assuming a 64x64 sprite sheet with 8 frames in a single row
             _animation.GetFramesFromTextureProperties(_texture.Width, _texture.Height, 15, 1, 15, 0);

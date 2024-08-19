@@ -14,7 +14,7 @@ namespace Testproject.Map
         public readonly int TileWidth = 64;
         public readonly int TileHeight = 64;
         private readonly List<Coin> _coins = new();
-        private readonly List<Tile> _tiles = new();
+        private readonly List<TileBase> _tiles = new();
         private readonly TileFactory _tileFactory;
         public readonly List<ILevel> _levels = new();
         public ILevel ActiveLevel;

@@ -17,12 +17,12 @@ namespace Testproject.Core.GameStates
 
         protected override void OnActivate()
         {
-
+            _game.SoundManager.PlayBackgroundMusic("Victory", false);
         }
 
         protected override void OnDeactivate()
         {
-
+            _game.SoundManager.StopBackgroundMusic();
         }
 
         public override void OnUpdate(GameTime time)

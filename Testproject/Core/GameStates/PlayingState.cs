@@ -6,6 +6,7 @@ namespace Testproject.Core.GameStates
     public class PlayingState : GameState
     {
         private GameManager _manager;
+        private Texture2D _heartTexture;
 
         public PlayingState(GameManager manager)
         {
@@ -15,6 +16,7 @@ namespace Testproject.Core.GameStates
         protected override void OnActivate()
         {
             _manager.SoundManager.PlayBackgroundMusic("LevelMusic", true, 0.02f);
+            _heartTexture = _manager.RootGame.Content.Load<Texture2D>("heartIcon");
         }
 
         protected override void OnDeactivate()
@@ -32,6 +34,19 @@ namespace Testproject.Core.GameStates
         {
             _manager.MapManager.RenderMap(batch);
             _manager.hero.Draw(batch);
+            DrawLives(batch);
+        }
+
+        private void DrawLives(SpriteBatch spriteBatch)
+        {
+            const int heartSize = 80; 
+            int spacing = 5;
+            Vector2 position = new Vector2(30, 10);
+
+            for (int i = 0; i < _manager.hero.Lives; i++)
+            {
+                spriteBatch.Draw(_heartTexture, position + new Vector2(i * (heartSize + spacing), 0), Color.White);
+            }
         }
     }
 }

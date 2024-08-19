@@ -9,8 +9,10 @@
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/BrainMoleMonarchSpriteSheet.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/coin1_64.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/Font.spritefont</File>
+    <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/GameOver.mp3</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/GhoulSpriteSheet.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/Gladiator-SpriteSheet.png</File>
+    <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/heartIcon.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/LevelMusic.mp3</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/origbig.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/ShardsoulSlayerSpriteSheet.png</File>
@@ -19,8 +21,14 @@
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/Tiles_4x.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/TilesX4.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/Victory.mp3</File>
+    <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/WinTrophy.png</File>
+    <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/YouDied.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

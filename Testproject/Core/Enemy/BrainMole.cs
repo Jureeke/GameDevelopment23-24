@@ -34,7 +34,7 @@ namespace Testproject.Core.Enemy
             moveAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 7, 4, 4, 2);
             animationManager.AddAnimation("Move", moveAnimation);
 
-            animationManager.SetAnimation("Idle");
+            animationManager.SetAnimation("Move");
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -51,14 +51,14 @@ namespace Testproject.Core.Enemy
 
                 // Calculate direction and move towards the target
                 Vector2 direction = targetPosition - position;
-                if (direction.Length() > 0) // Avoid division by zero
+                if (direction.Length() > 0)
                 {
                     direction.Normalize();
                     position += direction * speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
                 }
 
                 // Check if we have reached the target waypoint
-                if (Vector2.Distance(position, targetPosition) < 10f) // Adjust threshold as needed
+                if (Vector2.Distance(position, targetPosition) < 10f)
                 {
                     // Move to the next waypoint
                     currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;

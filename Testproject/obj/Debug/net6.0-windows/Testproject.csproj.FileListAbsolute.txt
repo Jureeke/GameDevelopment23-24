@@ -184,3 +184,8 @@ C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug
 C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\LevelMusic.xnb
 C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Victory.wma
 C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Victory.xnb
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\heartIcon.xnb
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\WinTrophy.xnb
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\YouDied.xnb
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GameOver.wma
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GameOver.xnb

@@ -17,7 +17,7 @@ namespace Testproject.Core.GameStates
 
         protected override void OnActivate()
         {
-            _game.SoundManager.PlayBackgroundMusic("Victory", false);
+            _game.SoundManager.PlayBackgroundMusic("Victory");
         }
 
         protected override void OnDeactivate()

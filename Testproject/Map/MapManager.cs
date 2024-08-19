@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using Testproject.Core.Enemy;
 using Testproject.Map.Levels;
 using Testproject.Map.Tiles;
 
@@ -13,8 +14,13 @@ namespace Testproject.Map
         private readonly int _verticalTiles = 12;
         public readonly int TileWidth = 64;
         public readonly int TileHeight = 64;
+
         private readonly List<Coin> _coins = new();
         private readonly List<TileBase> _tiles = new();
+        private readonly List<TileBase> _spikes = new();
+
+        private readonly List<IEnemy> _enemies = new();
+
         private readonly TileFactory _tileFactory;
         public readonly List<ILevel> _levels = new();
         public ILevel ActiveLevel;
@@ -110,6 +116,34 @@ namespace Testproject.Map
                 }
             }
         }
+
+#nullable enable
+        public TileBase? CollidesWithTerrain(Rectangle hitbox)
+        {
+            return _tiles.Find(tile => !tile.IsTransparent && tile.HitBox.Intersects(hitbox));
+        }
+
+        public List<TileBase> FindAllCollissionsWithMap(Rectangle hitbox)
+        {
+            return _tiles.FindAll(tile => tile.HitBox.Intersects(hitbox));
+        }
+
+        public List<TileBase> FindAllCollissionsWithSpikes(Rectangle hitbox)
+        {
+            return _spikes.FindAll(tile => tile.HitBox.Intersects(hitbox) && tile.type == TileMap.Tiles.SPIKE_3);
+        }
+
+        public List<IEnemy> FindAllCollissionsWithEnemy(Rectangle hitbox)
+        {
+            return _enemies.FindAll(enemy => enemy.HitBox.Intersects(hitbox));
+        }
+
+        public List<Coin> FindAllCollissionsWithCoins(Rectangle hitbox)
+        {
+            return _coins.FindAll(coin => coin.HitBox.Intersects(hitbox));
+        }
+
+
         public void GoToNextLevel()
         {
             ILevel nextLevel = _levels[1];

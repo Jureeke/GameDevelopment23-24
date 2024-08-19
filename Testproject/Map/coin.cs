@@ -1,9 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System.Diagnostics;
+using Testproject.Core.Enemy;
+using Testproject.Utility.Collision;
 
 namespace Testproject.Map.Tiles
 {
-    public class Coin
+    public class Coin : ICollidable
     {
         private GameManager _game;
         private int _x;
@@ -13,6 +16,19 @@ namespace Testproject.Map.Tiles
         private Texture2D _texture;
         private Animation _animation;
         private bool _isPickedUp;
+
+        // Backing field for the hitbox
+        private Rectangle _hitBox;
+
+        private Texture2D _hitboxTexture;
+
+
+        // Implement the HitBox property
+        public Rectangle HitBox
+        {
+            get => _hitBox;
+            set => _hitBox = value;
+        }
 
         public Coin(int x, int y, GameManager game)
         {
@@ -27,6 +43,7 @@ namespace Testproject.Map.Tiles
             _animation.GetFramesFromTextureProperties(_texture.Width, _texture.Height, 15, 1, 15, 0);
 
             _isPickedUp = false;
+
         }
 
         // Update the animation state of the coin
@@ -35,6 +52,8 @@ namespace Testproject.Map.Tiles
             if (!_isPickedUp)
             {
                 _animation.Update(gameTime);
+                // Update the hitbox position based on the coin's position
+                _hitBox = new Rectangle(_x, _y, _width, _height);
             }
         }
 
@@ -44,7 +63,7 @@ namespace Testproject.Map.Tiles
             if (!_isPickedUp)
             {
                 var currentFrame = _animation.CurrentFrame;
-                spriteBatch.Draw(_texture, new Rectangle(_x, _y, _width, _height), currentFrame.SourceRectangle, Color.White);
+                spriteBatch.Draw(_texture, _hitBox, currentFrame.SourceRectangle, Color.White);
             }
         }
 
@@ -54,6 +73,8 @@ namespace Testproject.Map.Tiles
             if (!_isPickedUp)
             {
                 _isPickedUp = true;
+                //implement score updates
+                _game.score++;
                 OnPickedUp();
             }
         }
@@ -61,7 +82,6 @@ namespace Testproject.Map.Tiles
         // Logic to be executed when the coin is picked up
         private void OnPickedUp()
         {
-            // Add any additional logic here, like playing a sound or updating the score
         }
     }
 }

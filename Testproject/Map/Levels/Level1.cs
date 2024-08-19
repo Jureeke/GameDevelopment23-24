@@ -51,16 +51,17 @@ namespace Testproject.Map.Levels
         };
 
         public Texture2D Background { get; set; }
-        public List<Enemy> Enemies { get; set; }
+        public List<IEnemy> Enemies { get; set; }
 
         public Level1(GameManager game)
         {
             _game = game;
 
-            _game.hero.ResetPosition(); // Reset the hero's position to the spawn point
+            _game.hero.ResetPosition(new Vector2 (0,770)); 
 
             Background = _game.RootGame.Content.Load<Texture2D>("background1");
-            Enemies = new List<Enemy>
+            
+            Enemies = new List<IEnemy>
             {
                 new ShardsoulSlayer(game, new Vector2(20, 155)),
                 new Ghoul(game, new Vector2(900, 35),new Vector2(1200, 35), true)

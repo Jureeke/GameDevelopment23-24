@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.Diagnostics;
 using Testproject.Utility.Collision;
 
 namespace Testproject.Map.Tiles
@@ -16,19 +17,9 @@ namespace Testproject.Map.Tiles
 
         public bool IsTransparent { get; private set; }
         public Rectangle HitBox { get; set; }
-        public SlopeOrientation Orientation { get; private set; }
-        public Vector2[] SlopePoints { get; private set; }
-
         private static Texture2D _hitboxTexture;
-
-        public enum SlopeOrientation
-        {
-            TopLeftToBottomRight,
-            BottomLeftToTopRight,
-            None
-        }
-
-        public TileBase(int x, int y, int width, int height, Texture2D texture, Rectangle offsetRectangle, SlopeOrientation orientation, bool transparent = false)
+        public TileMap.Tiles type;
+        public TileBase(TileMap.Tiles type, int x, int y, int width, int height, Texture2D texture, Rectangle offsetRectangle, bool transparent = false)
         {
             _x = x;
             _y = y;
@@ -37,7 +28,7 @@ namespace Testproject.Map.Tiles
             _texture = texture;
             _offsetRectangle = offsetRectangle;
             IsTransparent = transparent;
-            Orientation = orientation;
+
 
             if (_hitboxTexture == null)
             {
@@ -45,37 +36,17 @@ namespace Testproject.Map.Tiles
                 _hitboxTexture.SetData(new[] { Color.Red });
             }
 
-            HitBox = new Rectangle(_x, _y, _w, _h);
-            SetSlopePoints(orientation);
-        }
-
-        public void SetSlopePoints(SlopeOrientation orientation)
-        {
-            Orientation = orientation;
-            switch (orientation)
+            if (type == TileMap.Tiles.SPIKE_3)
             {
-                case SlopeOrientation.TopLeftToBottomRight:
-                    SlopePoints = new[]
-                    {
-                        new Vector2(_x, _y),
-                        new Vector2(_x + _w, _y + _h)
-                    };
-                    break;
+                HitBox = new Rectangle(_x, _y +_h/2, _w, _h/2);
 
-                case SlopeOrientation.BottomLeftToTopRight:
-                    SlopePoints = new[]
-                    {
-                        new Vector2(_x, _y + _h),
-                        new Vector2(_x + _w, _y)
-                    };
-                    break;
-
-                case SlopeOrientation.None:
-                    SlopePoints = null;
-                    break;
             }
-        }
+            else if(!transparent)
+            {
+                HitBox = new Rectangle(_x, _y, _w, _h);
+            }
 
+        }
         public void Draw(SpriteBatch spriteBatch, bool debugMode = true)
         {
             // Draw the tile

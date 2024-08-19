@@ -39,7 +39,7 @@ namespace Testproject.Map.Levels
             {null,null,null,null,null,null,null,null,null,Coin,null,null,null,null,null,null,null,null,null,null },
             {null,null,null,null,null,null,null,Grass,null,PLS,null,Grass,null,null,null,null,null,null,null,null },
             {null,null,null,null,null,null,null,PLS,null,null,null,PLS,null,null,null,null,null,null,null,null },
-            {null,null,Grass,Coin,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
+            {null,null,Grass,Coin,null,null,null,null,null,null,null,null,null,null,null,Coin,null,null,null,null },
             {null,null,PLL,PLM,PLR,null,null,null,null,null,null,null,null,null,PLL,PLM,PLR,null,null,null },
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,PLS,null,null },
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
@@ -51,7 +51,7 @@ namespace Testproject.Map.Levels
 
         public Vector2 SpawnLocation { get; set; }
         public Texture2D Background { get; set; }
-        public List<Enemy> Enemies { get; set; }
+        public List<IEnemy> Enemies { get; set; }
 
         public List<Vector2> waypoints = new List<Vector2>
         {
@@ -65,10 +65,11 @@ namespace Testproject.Map.Levels
         {
             _game = game;
             Background = _game.RootGame.Content.Load<Texture2D>("background2");
-            Enemies = new List<Enemy>
+            Enemies = new List<IEnemy>
             {
                 new BrainMole(game, new Vector2(80,80), waypoints)
             };
+
 
         }
         public void Update(GameTime gameTime)

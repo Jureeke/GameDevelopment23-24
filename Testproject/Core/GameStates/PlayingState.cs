@@ -39,9 +39,9 @@ namespace Testproject.Core.GameStates
 
         private void DrawLives(SpriteBatch spriteBatch)
         {
-            const int heartSize = 80; // Grootte van het hart icoon
-            int spacing = 5; // Ruimte tussen de hart iconen
-            Vector2 position = new Vector2(30, 10); // Startpositie voor de levens
+            const int heartSize = 80; 
+            int spacing = 5;
+            Vector2 position = new Vector2(30, 10);
 
             for (int i = 0; i < _manager.hero.Lives; i++)
             {

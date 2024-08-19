@@ -76,6 +76,7 @@ namespace Testproject.Map
             COIN_TURN3 = 59,
         }
 
+
         public TileMap(Texture2D texture)
         {
             TileTexture = texture;

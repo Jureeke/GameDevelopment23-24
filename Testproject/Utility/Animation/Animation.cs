@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Testproject
 {
-    internal class Animation
+    public class Animation
     {
         public AnimationFrame CurrentFrame { get; set; }
         private List<AnimationFrame> frames;

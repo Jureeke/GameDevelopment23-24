@@ -37,7 +37,7 @@ namespace GameDevProject.Core
             animation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
 
             // Calculate the spawn position to be in the bottom-left corner
-            spawnPosition = new Vector2(0, Game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - 192 -27  - 192);
+            spawnPosition = new Vector2(0, Game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - (64*6) - 27 );
 
 
             // Set the hero's initial position to the calculated spawn position
@@ -47,9 +47,9 @@ namespace GameDevProject.Core
             Speed = new Vector2(4, 2); // doubled the speed
             ((IMovable)this).inputReader = new KeyboardReader();
 
-            gravity = 1000f; // if changed to half can jump 2 blocks
+            gravity = 1000f; 
             isJumping = false;
-            jumpStrength = 450f;
+            jumpStrength = 700f; // if changed to half can jump 2 blocks
             groundLevel = Position.Y;
         }
 

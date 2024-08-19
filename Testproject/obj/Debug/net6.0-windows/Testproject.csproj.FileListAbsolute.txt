@@ -125,3 +125,4 @@ C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-wind
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GhoulSpriteSheet.xnb
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Gladiator-SpriteSheet.xnb
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\ShardsoulSlayerSpriteSheet.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\coin1_64.xnb

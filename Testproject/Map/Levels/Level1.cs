@@ -10,8 +10,8 @@ namespace Testproject.Map.Levels
     {
         private GameManager _game;
 
-        public readonly Animation _coinAnimation;
-        public readonly Texture2D _coinTexture;
+        public Animation _coinAnimation;
+        public Texture2D _coinTexture;
 
         #region Tile Definitions
         private const TileMap.Tiles Coin = TileMap.Tiles.COIN_BASE;
@@ -39,10 +39,10 @@ namespace Testproject.Map.Levels
         {
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
             {null,null,null,null,null,null,null,null,null,null,null,Coin,Grass,null,null,null,null,null,null,null },
-            {null,null,null,null,null,null,null,null,null,SL,TM,TM,TR,null,null,null,null,null,null,null },
+            {null,null,null,null,null,null,null,null,null,SL,TM,TM,TM,TR,null,null,null,null,null,null },
             {null,null,null,null,null,null,null,null,SL,BS,null,null,null,null,null,null,null,null,null,null },
             {null,null,Grass,Coin,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
-            {null,null,TL,TM,TR,null,null,null,null,null,null,null,null,null,Grass,null,null,null,null,null },
+            {null,TL,TM,TM,TR,null,null,null,null,null,null,null,null,null,Grass,null,null,null,null,null },
             {null,null,null,null,null,null,null,null,TL,TM,SR,null,null,null,TL,TM,SR,null,null,null },
             {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null },
             {null,Grass,null,null,null,null,null,Coin,null,null,null,null,Coin,null,null,null,null,null,Grass,null },

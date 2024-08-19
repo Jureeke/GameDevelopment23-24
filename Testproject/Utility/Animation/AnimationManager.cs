@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Testproject.Utility
+namespace Testproject
 {
     public class AnimationManager
     {

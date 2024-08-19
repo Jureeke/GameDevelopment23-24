@@ -90,10 +90,11 @@ namespace Testproject.Map
             foreach (var enemy in ActiveLevel.Enemies)
             {
                 enemy.Draw(batch); // Teken alle vijanden van het actieve niveau
-            // Coins
-            foreach (var coin in _coins)
-            {
-                coin.Draw(batch);
+                                   // Coins
+                foreach (var coin in _coins)
+                {
+                    coin.Draw(batch);
+                }
             }
         }
 
@@ -103,12 +104,12 @@ namespace Testproject.Map
             foreach (var enemy in ActiveLevel.Enemies)
             {
                 enemy.Update(time); // Werk alle vijanden van het actieve niveau bij
-            foreach (var coin in _coins)
-            {
-                coin.Update(time);
+                foreach (var coin in _coins)
+                {
+                    coin.Update(time);
+                }
             }
         }
-
         public void GoToNextLevel()
         {
             ILevel nextLevel = _levels[1];
@@ -117,6 +118,7 @@ namespace Testproject.Map
             CreateLevelMap(); // Render map tiles again
             LoadMapParameters(); // Other misc stuff
         }
-    }
+    } 
 }
+
     

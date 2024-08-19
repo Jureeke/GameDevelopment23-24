@@ -11,6 +11,7 @@
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/Font.spritefont</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/GhoulSpriteSheet.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/Gladiator-SpriteSheet.png</File>
+    <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/heartIcon.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/LevelMusic.mp3</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/origbig.png</File>
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/ShardsoulSlayerSpriteSheet.png</File>
@@ -21,6 +22,7 @@
     <File>C:/Users/vincentjure/Documents/GitHub/GameDevelopment23-24/Testproject/Content/Victory.mp3</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

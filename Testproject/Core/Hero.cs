@@ -17,6 +17,8 @@ namespace GameDevProject.Core
         private GameManager Game;
         private MovementManager movementManager;
 
+
+        public int Lives { get; private set; }
         public Vector2 Position { get; set; }
         public Vector2 Speed { get; set; }
         public Vector2 Direction { get; set; }
@@ -27,12 +29,14 @@ namespace GameDevProject.Core
         private float jumpStrength;
         private float groundLevel;
 
+
         public Hero(GameManager manager)
         {
             Game = manager;
             texture = Game.RootGame.Content.Load<Texture2D>("Gladiator-SpriteSheet");
             movementManager = new MovementManager();
             animationManager = new AnimationManager();
+            Lives = 3;
 
             // Voeg animaties toe
             var idleAnimation = new Animation();
@@ -85,6 +89,11 @@ namespace GameDevProject.Core
         {
             Position = spawnPosition;
             groundLevel = Position.Y;
+        }
+
+        public void DecreaseLives()
+        {
+            Lives = Math.Max(Lives - 1, 0);
         }
 
         private void UpdateAnimation(GameTime gameTime, Vector2 direction)

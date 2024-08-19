@@ -49,7 +49,6 @@ namespace Testproject.Map.Levels
             {BL,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BM,BR },
         };
 
-        public Vector2 SpawnLocation { get; set; }
         public Texture2D Background { get; set; }
         public List<IEnemy> Enemies { get; set; }
 
@@ -64,10 +63,12 @@ namespace Testproject.Map.Levels
         public Level2(GameManager game)
         {
             _game = game;
+            _game.hero.ResetPosition(new Vector2(0, 750));
             Background = _game.RootGame.Content.Load<Texture2D>("background2");
             Enemies = new List<IEnemy>
             {
-                new BrainMole(game, new Vector2(80,80), waypoints)
+                new BrainMole(game, new Vector2(80,80), waypoints),
+                new Ghoul(game, new Vector2(1200, 320),new Vector2(1400, 320), true),
             };
 
 

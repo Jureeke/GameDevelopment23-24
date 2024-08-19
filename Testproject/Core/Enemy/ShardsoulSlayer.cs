@@ -22,6 +22,10 @@ namespace Testproject.Core.Enemy
 
         private Texture2D hitboxTexture;  // Texture for drawing the hitbox
 
+        private double animationTimer; // Timer for tracking animation switching
+        private double animationInterval = 3.0; // Interval of 3 seconds
+        private string currentAnimation; // Track the current animation
+
         public ShardsoulSlayer(GameManager game, Vector2 position)
         {
             this.game = game;
@@ -29,15 +33,25 @@ namespace Testproject.Core.Enemy
             texture = game.RootGame.Content.Load<Texture2D>("ShardsoulSlayerSpriteSheet");
             animationManager = new AnimationManager();
 
+            // Initialize animations
             var idleAnimation = new Animation();
             idleAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 0);
             animationManager.AddAnimation("Idle", idleAnimation);
 
-            animationManager.SetAnimation("Idle");
+            var attackAnimation = new Animation();
+            attackAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 5, 2);
+            animationManager.AddAnimation("Attack", attackAnimation);
+
+            // Set initial animation to Idle
+            currentAnimation = "Idle";
+            animationManager.SetAnimation(currentAnimation);
 
             // Create a 1x1 white texture to use for the hitbox
             hitboxTexture = new Texture2D(game.RootGame.GraphicsDevice, 1, 1);
             hitboxTexture.SetData(new[] { Color.White });
+
+            // Initialize the animation timer
+            animationTimer = 0.0;
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -53,6 +67,35 @@ namespace Testproject.Core.Enemy
         {
             // Update the animation
             animationManager.Update(gameTime);
+
+            // Update the timer
+            animationTimer += gameTime.ElapsedGameTime.TotalSeconds;
+
+            // Check if 3 seconds have passed
+            if (animationTimer >= animationInterval)
+            {
+                // Switch between Idle and Attack animation
+                SwitchAnimation();
+
+                // Reset the timer
+                animationTimer = 0.0;
+            }
+        }
+
+        private void SwitchAnimation()
+        {
+            // Switch between Idle and Attack animations
+            if (currentAnimation == "Idle")
+            {
+                currentAnimation = "Attack";
+            }
+            else
+            {
+                currentAnimation = "Idle";
+            }
+
+            // Set the new animation
+            animationManager.SetAnimation(currentAnimation);
         }
 
         // Property to get/set the hitbox of the ShardsoulSlayer

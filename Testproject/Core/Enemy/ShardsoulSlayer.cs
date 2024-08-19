@@ -22,9 +22,9 @@ namespace Testproject.Core.Enemy
 
         private Texture2D hitboxTexture;  // Texture for drawing the hitbox
 
-        private double animationTimer; // Timer for tracking animation switching
-        private double animationInterval = 3.0; // Interval of 3 seconds
-        private string currentAnimation; // Track the current animation
+        private double animationTimer;
+        private double animationInterval = 3.0;
+        private string currentAnimation;
 
         public ShardsoulSlayer(GameManager game, Vector2 position)
         {

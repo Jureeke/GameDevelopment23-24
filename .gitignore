@@ -1,6 +1,7 @@
 #OS junk files
 [Tt]humbs.db
 *.DS_Store
+*.vs
 
 #Visual Studio files
 *.pidb
@@ -63,3 +64,4 @@ monodroid*.msi
 *.VC.opendb
 
 artifacts/
+obj/

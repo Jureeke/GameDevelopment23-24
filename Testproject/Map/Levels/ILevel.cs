@@ -9,7 +9,7 @@ namespace Testproject.Map.Levels
     {
         public TileMap.Tiles?[,] GameMap { get; set; }
         public Texture2D Background { get; set; }
-        public List<Enemy> Enemies { get; set; }
+        public List<IEnemy> Enemies { get; set; }
         public void Draw(SpriteBatch spriteBatch);
         public void Update(GameTime gameTime);
     }

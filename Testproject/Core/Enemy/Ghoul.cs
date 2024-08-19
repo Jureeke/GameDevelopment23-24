@@ -11,7 +11,7 @@ using Testproject.Utility;
 
 namespace Testproject.Core.Enemy
 {
-    public class Ghoul : Enemy
+    public class Ghoul : IEnemy
     {
         private GameManager game;
         private AnimationManager animationManager;
@@ -23,7 +23,11 @@ namespace Testproject.Core.Enemy
         private bool movingToEnd = true;
 
         private bool enableWalking = false;
-        public override Texture2D texture { get; set; }
+        public Texture2D texture { get; set; }
+        public Vector2 position { get; set; }
+        public Vector2 direction { get; set; }
+
+        private Texture2D hitboxTexture;  // Texture for drawing the hitbox
 
         public Ghoul(GameManager game, Vector2 position, Vector2 endPosition, bool enableWalking)
         {
@@ -40,7 +44,6 @@ namespace Testproject.Core.Enemy
             walkAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 8, 1);
             animationManager.AddAnimation("Walk", walkAnimation);
 
-            // Stel standaard animatie in
             animationManager.SetAnimation("Walk");
 
             direction = this.endPosistion - startPosistion;
@@ -48,42 +51,68 @@ namespace Testproject.Core.Enemy
             {
                 direction.Normalize();
             }
-        }
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            animationManager.Draw(spriteBatch, texture, position, direction);
+
+            // Create a 1x1 white texture to use for the hitbox
+            hitboxTexture = new Texture2D(game.RootGame.GraphicsDevice, 1, 1);
+            hitboxTexture.SetData(new[] { Color.White });
         }
 
-        public override void Update(GameTime gameTime)
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            // Draw the Ghoul's animation
+            animationManager.Draw(spriteBatch, texture, position, direction);
+
+            spriteBatch.Draw(hitboxTexture, HitBox, Color.Red * 0.5f); // Draw the hitbox with a semi-transparent red color
+        }
+
+        public void Update(GameTime gameTime)
         {
             if (enableWalking)
             {
                 float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                // Bereken de richting waarin de Ghoul moet bewegen
+                // Calculate the direction in which the Ghoul should move
                 Vector2 targetPosition = movingToEnd ? endPosistion : startPosistion;
                 Vector2 directionToTarget = targetPosition - position;
 
-                // Normaleer de richting om de snelheid constant te houden
+                // Normalize the direction to keep speed consistent
                 if (directionToTarget.Length() > 0)
                 {
                     direction = Vector2.Normalize(directionToTarget);
                 }
 
-                // Verplaats de Ghoul in de richting van het doel
+                // Move the Ghoul towards the target
                 position += direction * speed * deltaTime;
 
-                // Controleer of de Ghoul dichtbij genoeg is om van richting te veranderen
-                float threshold = 0.5f; // Verklein de drempel om preciezer te stoppen
+                // Check if the Ghoul is close enough to switch direction
+                float threshold = 0.5f; // Reduce threshold for more precise stopping
                 if (Vector2.Distance(position, targetPosition) < threshold)
                 {
-                    movingToEnd = !movingToEnd; // Wissel van richting
-                    position = targetPosition; // Zorg ervoor dat de Ghoul exact op het doel stopt
+                    movingToEnd = !movingToEnd; // Switch direction
+                    position = targetPosition; // Ensure the Ghoul stops exactly at the target
                 }
             }
 
-            // Update de animatie op basis van de huidige richting
+            // Update the animation based on the current direction
             animationManager.Update(gameTime);
         }
+
+        // Property to get/set the hitbox of the Ghoul
+        public Rectangle HitBox
+        {
+            get
+            {
+                return new Rectangle(
+                    (int)position.X,
+                    (int)position.Y + 32,
+                    144,
+                    112
+                );
+            }
+            set
+            {
+            }
+        }
+
     }
 }

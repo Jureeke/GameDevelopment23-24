@@ -11,12 +11,16 @@ using Testproject.Utility;
 
 namespace Testproject.Core.Enemy
 {
-    public class ShardsoulSlayer : Enemy
+    public class ShardsoulSlayer : IEnemy
     {
-
         private GameManager game;
         private AnimationManager animationManager;
-        public override Texture2D texture { get; set; }
+
+        public Texture2D texture { get; set; }
+        public Vector2 position { get; set; }
+        public Vector2 direction { get; set; }
+
+        private Texture2D hitboxTexture;  // Texture for drawing the hitbox
 
         public ShardsoulSlayer(GameManager game, Vector2 position)
         {
@@ -31,15 +35,41 @@ namespace Testproject.Core.Enemy
 
             animationManager.SetAnimation("Idle");
 
-        }
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            animationManager.Draw(spriteBatch, texture, position, direction);
+            // Create a 1x1 white texture to use for the hitbox
+            hitboxTexture = new Texture2D(game.RootGame.GraphicsDevice, 1, 1);
+            hitboxTexture.SetData(new[] { Color.White });
         }
 
-        public override void Update(GameTime gameTime)
+        public void Draw(SpriteBatch spriteBatch)
         {
+            // Draw the ShardsoulSlayer's animation
+            animationManager.Draw(spriteBatch, texture, position, direction);
+
+            // Draw the hitbox
+            spriteBatch.Draw(hitboxTexture, HitBox, Color.Red * 0.5f); // Draw the hitbox with a semi-transparent red color
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            // Update the animation
             animationManager.Update(gameTime);
+        }
+
+        // Property to get/set the hitbox of the ShardsoulSlayer
+        public Rectangle HitBox
+        {
+            get
+            {
+                return new Rectangle(
+                    (int)position.X + 60,
+                    (int)position.Y + 112,
+                    160,
+                    192
+                );
+            }
+            set
+            {
+            }
         }
     }
 }

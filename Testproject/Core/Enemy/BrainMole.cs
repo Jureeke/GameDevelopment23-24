@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SharpDX.Direct3D9;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using Testproject.Utility;
 
 namespace Testproject.Core.Enemy
 {
-    public class BrainMole : Enemy
+    public class BrainMole : IEnemy
     {
         private GameManager game;
         private AnimationManager animationManager;
@@ -18,7 +19,32 @@ namespace Testproject.Core.Enemy
         private int currentWaypointIndex;
 
         private float speed = 100f;
-        public override Texture2D texture { get; set; }
+
+        private int width = 64;  // Width of the hitbox
+        private int height = 64; // Height of the hitbox
+
+        // Property to get/set the hitbox of the BrainMole
+        public Rectangle HitBox
+        {
+            get
+            {
+                return new Rectangle(
+                    (int)position.X,
+                    (int)position.Y,
+                    width,
+                    height
+                );
+            }
+            set
+            {
+            }
+        }
+
+        public Vector2 position { get; set; }
+        public Vector2 direction { get; set; }
+        public Texture2D texture { get; set; }
+
+        private Texture2D hitboxTexture;  // Texture for drawing the hitbox
 
         public BrainMole(GameManager game, Vector2 position, List<Vector2> waypoints)
         {
@@ -26,23 +52,31 @@ namespace Testproject.Core.Enemy
             this.position = position;
             this.waypoints = waypoints;
 
-
-            texture = game.RootGame.Content.Load<Texture2D>("BrainMoleMonarchSpriteSheet");
+            ((IEnemy)this).texture = game.RootGame.Content.Load<Texture2D>("BrainMoleMonarchSpriteSheet");
             animationManager = new AnimationManager();
 
             var moveAnimation = new Animation();
-            moveAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 7, 4, 4, 2);
+            moveAnimation.GetFramesFromTextureProperties(((IEnemy)this).texture.Width, ((IEnemy)this).texture.Height, 7, 4, 4, 2);
             animationManager.AddAnimation("Move", moveAnimation);
 
             animationManager.SetAnimation("Move");
+
+            HitBox = new Rectangle((int)position.X, (int)position.Y, width, height);
+
+            // Create a 1x1 white texture to use for the hitbox
+            hitboxTexture = new Texture2D(game.RootGame.GraphicsDevice, 1, 1);
+            hitboxTexture.SetData(new[] { Color.White });
         }
 
-        public override void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch)
         {
-            animationManager.Draw(spriteBatch, texture, position, direction);
+            // Draw the BrainMole's animation
+            animationManager.Draw(spriteBatch, ((IEnemy)this).texture, position, direction);
+
+            spriteBatch.Draw(hitboxTexture, HitBox, Color.Red * 0.5f); // Draw the hitbox with a semi-transparent red color
         }
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             if (waypoints.Count > 0)
             {
@@ -64,6 +98,7 @@ namespace Testproject.Core.Enemy
                     currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
                 }
             }
+            HitBox = new Rectangle((int)position.X, (int)position.Y, width, height);
 
             animationManager.Update(gameTime);
         }

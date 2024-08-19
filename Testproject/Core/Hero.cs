@@ -4,18 +4,24 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Testproject;
+using Testproject.Core;
 using Testproject.Utility;
+using Testproject.Utility.Collision;
 
 namespace GameDevProject.Core
 {
-    public class Hero : IGameObject, IMovable
+    public class Hero : IGameObject, IMovable, ICollidable
     {
         public Texture2D texture;
         private AnimationManager animationManager;
 
         public Vector2 spawnPosition = new Vector2(0, 0);
-        private GameManager Game;
+        public GameManager _game;
         private MovementManager movementManager;
+        private HeroCollisionManager _collisionManager;
+
+        private readonly int hitBoxWidth = 70;
+        private readonly int hitBoxHeight = 112;
 
 
         public int Lives { get; private set; }
@@ -24,20 +30,38 @@ namespace GameDevProject.Core
         public Vector2 Direction { get; set; }
         IInputReader IMovable.inputReader { get; set; }
 
+        public Rectangle HitBox
+        {
+            get
+            {
+                return new Rectangle(
+                    (int)Position.X + hitBoxWidth / 2,
+                    (int)Position.Y + 28,
+                    hitBoxWidth,
+                    hitBoxHeight
+                );
+            }
+            set
+            {
+                // Set the hitbox property if needed
+            }
+        }
+
         private float gravity;
-        private bool isJumping;
+        public bool isJumping;
         private float jumpStrength;
         private float groundLevel;
 
 
         public Hero(GameManager manager)
         {
-            Game = manager;
-            texture = Game.RootGame.Content.Load<Texture2D>("Gladiator-SpriteSheet");
+            _game = manager;
+            texture = _game.RootGame.Content.Load<Texture2D>("Gladiator-SpriteSheet");
             movementManager = new MovementManager();
             animationManager = new AnimationManager();
             Lives = 3;
 
+            #region animations
             // Voeg animaties toe
             var idleAnimation = new Animation();
             idleAnimation.GetFramesFromTextureProperties(texture.Width, texture.Height, 8, 5, 2, 0);
@@ -53,10 +77,10 @@ namespace GameDevProject.Core
 
             // Stel standaard animatie in
             animationManager.SetAnimation("Idle");
+            #endregion
 
             // Calculate the spawn position to be in the bottom-left corner
-            spawnPosition = new Vector2(0, Game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - (64*6) - 27 );
-
+            spawnPosition = new Vector2(0, _game.RootGame.GraphicsDeviceManager.PreferredBackBufferHeight - (64 * 4));
 
             // Set the hero's initial position to the calculated spawn position
             Position = spawnPosition;
@@ -67,7 +91,7 @@ namespace GameDevProject.Core
 
             gravity = 1000f;
             isJumping = false;
-            jumpStrength = 700f; // if changed to half can jump 2 blocks
+            jumpStrength = 700f;
             groundLevel = Position.Y;
         }
 
@@ -82,13 +106,13 @@ namespace GameDevProject.Core
             UpdateAnimation(gameTime, direction);
             Move();
             UpdateJump(gameTime);
+            _collisionManager.Update(gameTime);
         }
 
         // Method to reset the hero's position when starting a level
-        public void ResetPosition()
+        public void ResetPosition(Vector2 spawn)
         {
-            Position = spawnPosition;
-            groundLevel = Position.Y;
+            Position = spawn;
         }
 
         public void DecreaseLives()
@@ -135,10 +159,7 @@ namespace GameDevProject.Core
         {
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (isJumping)
-            {
-                Speed = new Vector2(Speed.X, Speed.Y + gravity * deltaTime);
-            }
+            Speed = new Vector2(Speed.X, Speed.Y + gravity * deltaTime);
 
             Position += Speed * deltaTime;
 
@@ -148,6 +169,11 @@ namespace GameDevProject.Core
                 Speed = new Vector2(Speed.X, 0);
                 isJumping = false;
             }
+        }
+        
+        public void LateSetup()
+        {
+            _collisionManager = _game.heroCollisionManager;
         }
     }
 }

@@ -27,6 +27,8 @@ namespace Testproject
                 var distance = direction * movable.Speed;
                 movable.Position += new Vector2(distance.X, 0);
             }
+
+
         }
     }
 }

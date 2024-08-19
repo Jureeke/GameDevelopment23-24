@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Testproject;
 using Testproject.Audio;
+using Testproject.Core;
 using Testproject.Core.Enemy;
 using Testproject.Core.GameStates;
 using Testproject.Map;
@@ -15,10 +16,12 @@ public class GameManager : StateMachine, IGameObject
     public Game1 RootGame;
     public MapManager MapManager;
     public Hero hero;
+    public HeroCollisionManager heroCollisionManager;
     public int height; 
     public int width;
 
     public SoundManager SoundManager { get; private set; }
+    public int score = 0;
 
     public GameManager(Game1 game)
     {
@@ -28,6 +31,10 @@ public class GameManager : StateMachine, IGameObject
         height = game.GraphicsDevice.Viewport.Height;
         width = game.GraphicsDevice.Viewport.Width;
         hero = new Hero(this);
+
+        heroCollisionManager = new HeroCollisionManager(hero);
+        hero.LateSetup();
+        heroCollisionManager.lateSetup();
         MapManager.Setup();
 
         SoundManager = new SoundManager(game.Content);
@@ -65,7 +72,7 @@ public class GameManager : StateMachine, IGameObject
     {
         ActiveState?.OnUpdate(time);
         
-        if (Keyboard.GetState().IsKeyDown(Keys.M))
+        if (score == 8)
         {
             GoToState<WinningState>();
         }
@@ -73,7 +80,7 @@ public class GameManager : StateMachine, IGameObject
         {
             GoToState<DeathState>();
         }
-        else if (Keyboard.GetState().IsKeyDown(Keys.Enter) && ActiveState is PlayingState playingState)
+        else if (score == 4 && ActiveState is PlayingState playingState)
         {
             MapManager.GoToNextLevel();
         }

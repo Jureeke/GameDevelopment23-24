@@ -29,17 +29,9 @@ namespace Testproject.Map.Tiles
             _offsetRectangle = offsetRectangle;
             IsTransparent = transparent;
 
-
-            if (_hitboxTexture == null)
-            {
-                _hitboxTexture = new Texture2D(texture.GraphicsDevice, 1, 1);
-                _hitboxTexture.SetData(new[] { Color.Red });
-            }
-
             if (type == TileMap.Tiles.SPIKE_3)
             {
                 HitBox = new Rectangle(_x, _y +_h/2, _w, _h/2);
-
             }
             else if(!transparent)
             {
@@ -47,39 +39,13 @@ namespace Testproject.Map.Tiles
             }
 
         }
-        public void Draw(SpriteBatch spriteBatch, bool debugMode = true)
+        public void Draw(SpriteBatch spriteBatch)
         {
             // Draw the tile
             spriteBatch.Draw(_texture, new Rectangle(_x, _y, _w, _h), _offsetRectangle, Color.White);
 
-            if (debugMode)
-            {
-                DrawRectangleOutline(spriteBatch, HitBox, Color.Red);
-            }
         }
 
-        private void DrawLine(SpriteBatch spriteBatch, Vector2 point1, Vector2 point2, Color color)
-        {
-            float distance = Vector2.Distance(point1, point2);
-            float angle = (float)Math.Atan2(point2.Y - point1.Y, point2.X - point1.X);
-
-            spriteBatch.Draw(_hitboxTexture,
-                             point1,
-                             null,
-                             color,
-                             angle,
-                             Vector2.Zero,
-                             new Vector2(distance, 1),
-                             SpriteEffects.None,
-                             0);
-        }
-
-        private void DrawRectangleOutline(SpriteBatch spriteBatch, Rectangle rectangle, Color color)
-        {
-            DrawLine(spriteBatch, new Vector2(rectangle.Left, rectangle.Top), new Vector2(rectangle.Right, rectangle.Top), color);
-            DrawLine(spriteBatch, new Vector2(rectangle.Right, rectangle.Top), new Vector2(rectangle.Right, rectangle.Bottom), color);
-            DrawLine(spriteBatch, new Vector2(rectangle.Right, rectangle.Bottom), new Vector2(rectangle.Left, rectangle.Bottom), color);
-            DrawLine(spriteBatch, new Vector2(rectangle.Left, rectangle.Bottom), new Vector2(rectangle.Left, rectangle.Top), color);
-        }
+      
     }
 }

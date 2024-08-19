@@ -34,19 +34,12 @@ namespace Testproject.Core.Enemy
             animationManager.AddAnimation("Idle", idleAnimation);
 
             animationManager.SetAnimation("Idle");
-
-            // Create a 1x1 white texture to use for the hitbox
-            hitboxTexture = new Texture2D(game.RootGame.GraphicsDevice, 1, 1);
-            hitboxTexture.SetData(new[] { Color.White });
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             // Draw the ShardsoulSlayer's animation
             animationManager.Draw(spriteBatch, texture, position, direction);
-
-            // Draw the hitbox
-            spriteBatch.Draw(hitboxTexture, HitBox, Color.Red * 0.5f); // Draw the hitbox with a semi-transparent red color
         }
 
         public void Update(GameTime gameTime)

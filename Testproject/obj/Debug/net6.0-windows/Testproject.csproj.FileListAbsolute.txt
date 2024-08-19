@@ -189,3 +189,14 @@ C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug
 C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\YouDied.xnb
 C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GameOver.wma
 C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GameOver.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GameOver.wma
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\GameOver.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\heartIcon.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\LevelMusic.wma
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\LevelMusic.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\StartscreenMusic.wma
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\StartscreenMusic.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Victory.wma
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Victory.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\WinTrophy.xnb
+C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\YouDied.xnb

@@ -12,5 +12,6 @@ namespace Testproject.Map.Levels
         public List<IEnemy> Enemies { get; set; }
         public void Draw(SpriteBatch spriteBatch);
         public void Update(GameTime gameTime);
+        public Vector2 spawnpoint { get; set; }
     }
 }

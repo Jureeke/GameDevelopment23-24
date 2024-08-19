@@ -24,7 +24,7 @@ namespace GameDevProject.Core
         private readonly int hitBoxHeight = 112;
 
 
-        public int Lives { get; private set; }
+        public int Lives { get; set; }
         public Vector2 Position { get; set; }
         public Vector2 Speed { get; set; }
         public Vector2 Direction { get; set; }
@@ -133,6 +133,7 @@ namespace GameDevProject.Core
             {
                 animationManager.SetAnimation("Walk");
             }
+
             else
             {
                 animationManager.SetAnimation("Idle");

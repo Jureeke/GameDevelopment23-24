@@ -52,6 +52,7 @@ namespace Testproject.Map.Levels
         public Vector2 SpawnLocation { get; set; }
         public Texture2D Background { get; set; }
         public List<IEnemy> Enemies { get; set; }
+        public Vector2 spawnpoint { get; set; }
 
         public List<Vector2> waypoints = new List<Vector2>
         {
@@ -65,12 +66,18 @@ namespace Testproject.Map.Levels
         {
             _game = game;
             Background = _game.RootGame.Content.Load<Texture2D>("background2");
+            spawnpoint = new Vector2(0,770);
+            _game.hero.ResetPosition(spawnpoint);
+
             Enemies = new List<IEnemy>
             {
                 new BrainMole(game, new Vector2(80,80), waypoints)
             };
 
-
+            foreach (var enemy in Enemies)
+            {
+                _game.MapManager._enemies.Add(enemy);
+            }
         }
         public void Update(GameTime gameTime)
         {

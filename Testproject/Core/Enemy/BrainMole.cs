@@ -20,8 +20,8 @@ namespace Testproject.Core.Enemy
 
         private float speed = 100f;
 
-        private int width = 64;  // Width of the hitbox
-        private int height = 64; // Height of the hitbox
+        private int width = 128;  // Width of the hitbox
+        private int height = 128; // Height of the hitbox
 
         // Property to get/set the hitbox of the BrainMole
         public Rectangle HitBox
@@ -62,10 +62,6 @@ namespace Testproject.Core.Enemy
             animationManager.SetAnimation("Move");
 
             HitBox = new Rectangle((int)position.X, (int)position.Y, width, height);
-
-            // Create a 1x1 white texture to use for the hitbox
-            hitboxTexture = new Texture2D(game.RootGame.GraphicsDevice, 1, 1);
-            hitboxTexture.SetData(new[] { Color.White });
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -73,7 +69,6 @@ namespace Testproject.Core.Enemy
             // Draw the BrainMole's animation
             animationManager.Draw(spriteBatch, ((IEnemy)this).texture, position, direction);
 
-            spriteBatch.Draw(hitboxTexture, HitBox, Color.Red * 0.5f); // Draw the hitbox with a semi-transparent red color
         }
 
         public void Update(GameTime gameTime)

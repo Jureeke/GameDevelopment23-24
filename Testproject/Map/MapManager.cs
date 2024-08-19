@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Testproject.Core.Enemy;
 using Testproject.Map.Levels;
 using Testproject.Map.Tiles;
@@ -19,7 +20,7 @@ namespace Testproject.Map
         private readonly List<TileBase> _tiles = new();
         private readonly List<TileBase> _spikes = new();
 
-        private readonly List<IEnemy> _enemies = new();
+        public List<IEnemy> _enemies = new();
 
         private readonly TileFactory _tileFactory;
         public readonly List<ILevel> _levels = new();
@@ -49,6 +50,7 @@ namespace Testproject.Map
             // Clear existing tiles and objects
             _tiles.Clear();
             _coins.Clear();
+            _spikes.Clear(); // Clear spikes as well
 
             // Generate tile map
             for (int y = 0; y < _verticalTiles; y++)
@@ -67,6 +69,12 @@ namespace Testproject.Map
                             Coin coin = new Coin(xOffset, yOffset, _game);
                             _coins.Add(coin);
                         }
+                        else if (tile.Value == TileMap.Tiles.SPIKE_3)
+                        {
+                            // Instantiate and add the spike to the list as TileBase
+                            TileBase spike = _tileFactory.CreateTile(tile.Value, xOffset, yOffset); // Assuming TileBase can represent spikes
+                            _spikes.Add(spike);
+                        }
                         else
                         {
                             _tiles.Add(_tileFactory.CreateTile(tile.Value, xOffset, yOffset));
@@ -78,7 +86,6 @@ namespace Testproject.Map
 
         public void LoadMapParameters()
         {
-            // Additional setup for the level
         }
 
         public void RenderMap(SpriteBatch batch)
@@ -96,11 +103,14 @@ namespace Testproject.Map
             foreach (var enemy in ActiveLevel.Enemies)
             {
                 enemy.Draw(batch); // Teken alle vijanden van het actieve niveau
-                                   // Coins
                 foreach (var coin in _coins)
                 {
                     coin.Draw(batch);
                 }
+            }
+            foreach (var spike in _spikes)
+            {
+                spike.Draw(batch);
             }
         }
 
@@ -122,22 +132,20 @@ namespace Testproject.Map
         {
             return _tiles.Find(tile => !tile.IsTransparent && tile.HitBox.Intersects(hitbox));
         }
-
         public List<TileBase> FindAllCollissionsWithMap(Rectangle hitbox)
         {
             return _tiles.FindAll(tile => tile.HitBox.Intersects(hitbox));
         }
-
         public List<TileBase> FindAllCollissionsWithSpikes(Rectangle hitbox)
         {
-            return _spikes.FindAll(tile => tile.HitBox.Intersects(hitbox) && tile.type == TileMap.Tiles.SPIKE_3);
+            _spikes.FindAll(tile => tile.type == TileMap.Tiles.SPIKE_3 && tile.HitBox.Intersects(hitbox));
+            Debug.WriteLine(_spikes.Count);
+            return _spikes;
         }
-
         public List<IEnemy> FindAllCollissionsWithEnemy(Rectangle hitbox)
         {
             return _enemies.FindAll(enemy => enemy.HitBox.Intersects(hitbox));
         }
-
         public List<Coin> FindAllCollissionsWithCoins(Rectangle hitbox)
         {
             return _coins.FindAll(coin => coin.HitBox.Intersects(hitbox));
@@ -150,9 +158,28 @@ namespace Testproject.Map
             ActiveLevel = nextLevel;
 
             CreateLevelMap(); // Render map tiles again
-            LoadMapParameters(); // Other misc stuff
+            LoadMapParameters();
         }
-    } 
+
+        public void RestartLevel()
+        {
+            // Clear existing tiles, coins, and enemies
+            _tiles.Clear();
+            _coins.Clear();
+
+            // Reinitialize the current active level
+            if (ActiveLevel != null)
+            {
+                // Recreate the map for the active level
+                CreateLevelMap();
+
+                // Optionally, reset the level parameters if needed
+                LoadMapParameters();
+                _game.hero.ResetPosition(ActiveLevel.spawnpoint);
+
+            }
+        }
+    }
 }
 
     

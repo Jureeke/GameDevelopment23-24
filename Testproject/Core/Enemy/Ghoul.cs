@@ -52,17 +52,12 @@ namespace Testproject.Core.Enemy
                 direction.Normalize();
             }
 
-            // Create a 1x1 white texture to use for the hitbox
-            hitboxTexture = new Texture2D(game.RootGame.GraphicsDevice, 1, 1);
-            hitboxTexture.SetData(new[] { Color.White });
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             // Draw the Ghoul's animation
             animationManager.Draw(spriteBatch, texture, position, direction);
-
-            spriteBatch.Draw(hitboxTexture, HitBox, Color.Red * 0.5f); // Draw the hitbox with a semi-transparent red color
         }
 
         public void Update(GameTime gameTime)

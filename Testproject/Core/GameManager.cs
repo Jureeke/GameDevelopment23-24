@@ -76,7 +76,7 @@ public class GameManager : StateMachine, IGameObject
         {
             GoToState<WinningState>();
         }
-        else if (Keyboard.GetState().IsKeyDown(Keys.N))
+        else if (hero.Lives <= 0)
         {
             GoToState<DeathState>();
         }

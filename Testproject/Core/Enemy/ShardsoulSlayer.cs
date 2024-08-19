@@ -58,9 +58,6 @@ namespace Testproject.Core.Enemy
         {
             // Draw the ShardsoulSlayer's animation
             animationManager.Draw(spriteBatch, texture, position, direction);
-
-            // Draw the hitbox
-            spriteBatch.Draw(hitboxTexture, HitBox, Color.Red * 0.5f); // Draw the hitbox with a semi-transparent red color
         }
 
         public void Update(GameTime gameTime)

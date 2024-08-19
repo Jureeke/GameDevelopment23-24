@@ -177,3 +177,10 @@ C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-wind
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\background1.xnb
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\background2.xnb
 C:\23-24\Game Development\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\StartscreenBackground.xnb
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\coin1_64.xnb
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\StartscreenMusic.wma
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\StartscreenMusic.xnb
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\LevelMusic.wma
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\LevelMusic.xnb
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Victory.wma
+C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\bin\Debug\net6.0-windows\Content\Victory.xnb

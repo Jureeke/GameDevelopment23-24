@@ -57,14 +57,14 @@ namespace Testproject.Map.Levels
         {
             _game = game;
 
-            _game.hero.ResetPosition(new Vector2 (0,770)); 
+            _game.hero.ResetPosition(new Vector2 (0,750)); 
 
             Background = _game.RootGame.Content.Load<Texture2D>("background1");
             
             Enemies = new List<IEnemy>
             {
-                new ShardsoulSlayer(game, new Vector2(20, 155)),
-                new Ghoul(game, new Vector2(900, 35),new Vector2(1200, 35), true)
+                new ShardsoulSlayer(game, new Vector2(20, 157)),
+                new Ghoul(game, new Vector2(900, 120),new Vector2(1200, 120), true),
             };
         }
 
@@ -78,23 +78,21 @@ namespace Testproject.Map.Levels
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (var item in Enemies)
-            {
-                item.Draw(spriteBatch);
-            }
-            Background = _game.RootGame.Content.Load<Texture2D>("origbig");
-            _coinTexture = _game.RootGame.Content.Load<Texture2D>("coin1_64");
+                foreach (var item in Enemies)
+                {
+                    item.Draw(spriteBatch);
+                }
+                Background = _game.RootGame.Content.Load<Texture2D>("origbig");
+                _coinTexture = _game.RootGame.Content.Load<Texture2D>("coin1_64");
 
-            _coinAnimation = new Animation();
-            _coinAnimation.GetFramesFromTextureProperties(
-                _coinTexture.Width,
-                _coinTexture.Height,
-                16,
-                1,
-                8,
-                0);
+                _coinAnimation = new Animation();
+                _coinAnimation.GetFramesFromTextureProperties(
+                    _coinTexture.Width,
+                    _coinTexture.Height,
+                    16,
+                    1,
+                    8,
+                    0);
         }
-
-
     }
 }

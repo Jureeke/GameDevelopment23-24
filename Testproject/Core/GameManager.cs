@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Testproject;
+using Testproject.Audio;
 using Testproject.Core.Enemy;
 using Testproject.Core.GameStates;
 using Testproject.Map;
@@ -17,6 +18,8 @@ public class GameManager : StateMachine, IGameObject
     public int height; 
     public int width;
 
+    public SoundManager SoundManager { get; private set; }
+
     public GameManager(Game1 game)
     {
 
@@ -26,6 +29,8 @@ public class GameManager : StateMachine, IGameObject
         width = game.GraphicsDevice.Viewport.Width;
         hero = new Hero(this);
         MapManager.Setup();
+
+        SoundManager = new SoundManager(game.Content);
 
         AddState(new MainMenuState(this));
         AddState(new PlayingState(this));

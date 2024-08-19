@@ -14,6 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Testproject
-build_property.ProjectDir = C:\23-24\Game Development\GameDevelopment23-24\Testproject\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\vincentjure\Documents\GitHub\GameDevelopment23-24\Testproject\

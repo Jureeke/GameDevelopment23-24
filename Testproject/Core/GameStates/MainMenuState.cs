@@ -16,12 +16,12 @@ namespace Testproject.Core.GameStates
         }
         protected override void OnActivate()
         {
-
+            _game.SoundManager.PlayBackgroundMusic("StartscreenMusic", true, 0.1f);
         }
 
         protected override void OnDeactivate()
         {
-
+            _game.SoundManager.StopBackgroundMusic();
         }
 
         public override void OnUpdate(GameTime time)

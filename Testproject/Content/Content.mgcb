@@ -93,6 +93,12 @@
 /processorParam:TextureFormat=Color
 /build:Gladiator-SpriteSheet.png
 
+#begin LevelMusic.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:LevelMusic.mp3
+
 #begin origbig.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -129,6 +135,12 @@
 /processorParam:TextureFormat=Color
 /build:StartscreenBackground.png
 
+#begin StartscreenMusic.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:StartscreenMusic.mp3
+
 #begin Tiles_4x.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -152,4 +164,10 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TilesX4.png
+
+#begin Victory.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Victory.mp3
 

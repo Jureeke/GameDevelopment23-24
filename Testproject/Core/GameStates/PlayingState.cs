@@ -14,12 +14,12 @@ namespace Testproject.Core.GameStates
 
         protected override void OnActivate()
         {
-
+            _manager.SoundManager.PlayBackgroundMusic("LevelMusic", true, 0.02f);
         }
 
         protected override void OnDeactivate()
         {
-
+            _manager.SoundManager.StopBackgroundMusic();
         }
 
         public override void OnUpdate(GameTime time)
